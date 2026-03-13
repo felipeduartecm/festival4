@@ -85,6 +85,14 @@ const ARTISTS = [
     description: 'Tributo ao rock clássico internacional',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_3yYUug_image_114d681e.png',
   },
+  {
+    id: 11,
+    name: 'Raimundera Cover Oficial',
+    genre: 'Rock Alternativo',
+    time: '22:30 - 23:30',
+    description: 'Tributo oficial ao Raimundera',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_oI9m16_image_29c294f3.png',
+  },
 ];
 
 const FAQS = [
