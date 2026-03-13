@@ -77,6 +77,14 @@ const ARTISTS = [
     description: 'Os maiores sucessos dos anos 80',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EMD929_image_ad8d3cc7.png',
   },
+  {
+    id: 10,
+    name: 'CRM Cover Brasil',
+    genre: 'Rock Clássico',
+    time: '21:30 - 22:30',
+    description: 'Tributo ao rock clássico internacional',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_3yYUug_image_114d681e.png',
+  },
 ];
 
 const FAQS = [
