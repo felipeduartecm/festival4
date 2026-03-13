@@ -129,16 +129,16 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/hero-festival-cristofoli-9rzs8dhNLPidiNHYvukNgy.webp)',
+            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_a1DrGS_image_0c8984ff.png)',
           }}
         >
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <p className="text-festival-yellow text-lg md:text-xl font-bold tracking-widest mb-4 uppercase">
-            Festival Cristófoli 2026
+          <p className="text-festival-neon-green text-lg md:text-xl font-bold tracking-widest mb-4 uppercase animate-pulse">
+            14º Festival de Rock
           </p>
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             VIVA UMA
