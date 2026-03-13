@@ -137,17 +137,31 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-end h-full pb-48">
-          <Link href="#ingressos">
-            <Button className="bg-gradient-to-r from-festival-pink to-festival-purple hover:shadow-2xl text-white px-12 py-8 text-xl font-bold rounded-full">
-              GARANTA SEU INGRESSO JÁ
-            </Button>
-          </Link>
         </div>
 
         {/* Event Info Card */}
         <div className="absolute bottom-8 right-8 bg-black/60 backdrop-blur-md border border-festival-yellow/30 rounded-2xl px-6 py-4 text-right hidden md:block">
           <p className="text-festival-yellow text-sm font-bold mb-2">📍 19 DE SETEMBRO DE 2026</p>
           <p className="text-white text-sm">MOURÃO GARDEN - CAMPO MOURÃO, PR</p>
+        </div>
+      </section>
+
+      {/* CTA Card Section */}
+      <section className="relative -mt-16 px-4 pb-20">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-festival-pink to-festival-purple rounded-3xl shadow-2xl p-12 text-center relative z-20">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              NÃO PERCA ESTE MOMENTO
+            </h2>
+            <p className="text-white text-lg mb-8 font-light">
+              Garanta seu ingresso agora e faça parte da história do 14º Festival de Rock
+            </p>
+            <Link href="#ingressos">
+              <Button className="bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple px-16 py-4 text-xl font-black rounded-full w-full sm:w-auto">
+                GARANTA SEU INGRESSO JÁ
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
