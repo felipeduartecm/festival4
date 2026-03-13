@@ -136,7 +136,7 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-32">
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-48">
           <Link href="#ingressos">
             <Button className="bg-gradient-to-r from-festival-pink to-festival-purple hover:shadow-2xl text-white px-12 py-8 text-xl font-bold rounded-full">
               GARANTA SEU INGRESSO JÁ
