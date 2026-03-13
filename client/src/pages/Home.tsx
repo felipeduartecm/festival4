@@ -93,6 +93,14 @@ const ARTISTS = [
     description: 'Tributo oficial ao Raimundera',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_oI9m16_image_29c294f3.png',
   },
+  {
+    id: 12,
+    name: 'Iron Maiden Cover Brasil',
+    genre: 'Heavy Metal',
+    time: '23:30 - 00:30',
+    description: 'Tributo oficial ao Iron Maiden',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_6mbJZL_image_a1c6e4b6.png',
+  },
 ];
 
 const FAQS = [
