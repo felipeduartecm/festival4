@@ -79,7 +79,7 @@ const ARTISTS = [
   },
   {
     id: 10,
-    name: 'CRM Cover Brasil',
+    name: 'CPM22 Cover Brasil',
     genre: 'Rock Clássico',
     time: '21:30 - 22:30',
     description: 'Tributo ao rock clássico internacional',
