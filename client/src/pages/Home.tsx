@@ -216,15 +216,7 @@ export default function Home() {
         backgroundPosition: 'center',
       }}>
         <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-16">
-          <div className="bg-gradient-to-r from-festival-pink to-festival-purple rounded-2xl p-8 max-w-2xl mx-4 shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-4 text-center">NÃO PERCA ESTE MOMENTO</h2>
-            <p className="text-white text-center mb-6">Garanta seu ingresso agora e faça parte da história do 14º Festival de Rock</p>
-            <Button className="w-full bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black text-lg py-6">
-              PRÉ-VENDA
-            </Button>
-          </div>
-        </div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full"></div>
 
         {/* Date/Location Card */}
         <div className="absolute bottom-8 right-8 bg-black/80 text-white px-6 py-4 rounded-lg">
@@ -235,6 +227,19 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <MapPin size={20} className="text-festival-pink" />
             <span>MOURÃO GARDEN - CAMPO MOURÃO, PR</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Pre-venda Card Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-festival-pink to-festival-purple rounded-2xl p-8 shadow-2xl">
+            <h3 className="text-3xl md:text-4xl font-black text-white mb-4 text-center">NÃO PERCA ESTE MOMENTO</h3>
+            <p className="text-white text-center mb-8 text-lg">Garanta seu ingresso agora e faça parte da história do 14º Festival de Rock</p>
+            <Button className="w-full bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black text-lg py-6">
+              PRÉ-VENDA
+            </Button>
           </div>
         </div>
       </section>
