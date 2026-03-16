@@ -1,81 +1,93 @@
-import { useState, useRef, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, MapPin, Calendar, Users } from 'lucide-react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-const ARTISTS = [
+const SCHEDULE = [
   {
-    id: 1,
-    name: 'Backdoors Band',
-    genre: 'The Doors Cover Brasil',
-    time: '16:00 - 17:00',
-    description: 'Tributo oficial ao The Doors',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_GttyNF_image_a754cfff.png',
+    time: '14:00 - 15:00',
+    stage1: {
+      id: 1,
+      name: 'Escola de Música Adriano Lima',
+      genre: 'Apresentação Musical',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+      isHeadliner: false,
+    },
+    stage2: {
+      id: 2,
+      name: 'Banda Gurgel',
+      genre: 'Rock Nacional',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/hero-festival-cristofoli.png',
+      isHeadliner: false,
+    },
   },
   {
-    id: 3,
-    name: 'B2S - Back 2 School',
-    genre: '00\'s Hits',
-    time: '17:30 - 18:30',
-    description: 'Sucessos dos anos 2000',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_jETCTp_image_d3d8ff27.png',
-  },
-  {
-    id: 8,
-    name: 'System Of A Down',
-    genre: 'Cover Oficial Brasil',
-    time: '19:00 - 20:00',
-    description: 'Tributo oficial ao System Of A Down',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_wIWkAI_image_ce35f691.png',
-  },
-  {
-    id: 9,
-    name: 'Candyman Club',
-    genre: 'Sucessos dos Anos 80',
-    time: '20:30 - 21:30',
-    description: 'Os maiores sucessos dos anos 80',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EMD929_image_ad8d3cc7.png',
-  },
-  {
-    id: 10,
-    name: 'CPM22 Cover Brasil',
-    genre: 'Rock Clássico',
-    time: '21:30 - 22:30',
-    description: 'Tributo ao rock clássico internacional',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_3yYUug_image_114d681e.png',
-  },
-  {
-    id: 11,
-    name: 'Raimundera Cover Oficial',
-    genre: 'Rock Alternativo',
-    time: '22:30 - 23:30',
-    description: 'Tributo oficial ao Raimundera',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_oI9m16_image_29c294f3.png',
-  },
-  {
-    id: 12,
-    name: 'Iron Maiden Cover Brasil',
-    genre: 'Heavy Metal',
-    time: '23:30 - 00:30',
-    description: 'Tributo oficial ao Iron Maiden',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_6mbJZL_image_a1c6e4b6.png',
-  },
-  {
-    id: 13,
-    name: 'Escola de Música Adriano Lima',
-    genre: 'Apresentação Musical',
     time: '15:00 - 16:00',
-    description: 'Apresentação dos alunos da escola de música',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+    stage1: {
+      id: 3,
+      name: 'Dirigível Cósmico',
+      genre: 'Tributo Led Zeppelin',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_iyeNNY_image_4b855368.png',
+      isHeadliner: false,
+    },
+    stage2: {
+      id: 4,
+      name: 'Raimundera Cover Oficial',
+      genre: 'Rock Alternativo',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_oI9m16_image_29c294f3.png',
+      isHeadliner: false,
+    },
   },
   {
-    id: 14,
-    name: 'Dirigível Cósmico',
-    genre: 'Tributo Led Zeppelin',
-    time: '18:00 - 19:00',
-    description: 'Tributo oficial ao Led Zeppelin',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_iyeNNY_image_4b855368.png',
+    time: '16:00 - 17:00',
+    stage1: {
+      id: 5,
+      name: 'CPM22 Cover Brasil',
+      genre: 'Rock Clássico',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_3yYUug_image_114d681e.png',
+      isHeadliner: false,
+    },
+    stage2: {
+      id: 6,
+      name: 'B2S - Back 2 School',
+      genre: '00\'s Hits',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_jETCTp_image_d3d8ff27.png',
+      isHeadliner: false,
+    },
+  },
+  {
+    time: '17:00 - 18:00',
+    stage1: {
+      id: 7,
+      name: 'Backdoors Band',
+      genre: 'The Doors Cover Brasil',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_GttyNF_image_a754cfff.png',
+      isHeadliner: false,
+    },
+    stage2: {
+      id: 8,
+      name: 'Candyman Club',
+      genre: 'Sucessos dos Anos 80',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EMD929_image_ad8d3cc7.png',
+      isHeadliner: true,
+    },
+  },
+  {
+    time: '18:00 - 19:30',
+    stage1: {
+      id: 9,
+      name: 'System Of A Down',
+      genre: 'Cover Oficial Brasil',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_wIWkAI_image_ce35f691.png',
+      isHeadliner: true,
+    },
+    stage2: {
+      id: 10,
+      name: 'Iron Maiden Cover Brasil',
+      genre: 'Heavy Metal',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_6mbJZL_image_a1c6e4b6.png',
+      isHeadliner: true,
+    },
   },
 ];
 
@@ -101,151 +113,112 @@ const FAQS = [
   {
     id: 4,
     question: 'Quem tem direito à meia-entrada?',
-    answer: 'Têm direito à meia-entrada: estudantes, idosos acima de 60 anos, pessoas com deficiência e beneficiários do programa de renda.',
+    answer: 'Estudantes, idosos acima de 60 anos, pessoas com deficiência e seus acompanhantes têm direito à meia-entrada. É necessário apresentar documento comprobatório.',
     color: 'bg-festival-pink',
   },
   {
     id: 5,
     question: 'Quais são os setores do festival?',
-    answer: 'Oferecemos Área Geral, Área VIP e Área Acessibilidade. Cada setor possui benefícios específicos e diferentes experiências.',
+    answer: 'O festival possui diferentes setores com acesso aos palcos, áreas VIP, food trucks e espaços de descanso. Todos os ingressos têm acesso a todas as áreas.',
     color: 'bg-festival-purple',
   },
 ];
 
+const PARTNERS = [
+  {
+    id: 1,
+    name: 'Agenna Som',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Ms8yur_image_2c9f2f26.png',
+  },
+  {
+    id: 2,
+    name: 'Garcia Foods',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ZiBEAT_image_e4c7c3a8.png',
+  },
+  {
+    id: 3,
+    name: 'Mourão Garden',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_FX4gyu_image_c4e1c9d5.png',
+  },
+  {
+    id: 4,
+    name: 'Cristófoli Biossegurança',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_foV8Rv_image_5f5c7b2a.png',
+  },
+  {
+    id: 5,
+    name: 'Biovis',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_c9ycqy_image_c8b2a0f8.png',
+  },
+];
+
+const FOOD_TRUCKS = [
+  {
+    id: 1,
+    name: 'KFC',
+    description: 'Frango crocante e delicioso',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_pL6OSy_image_8f4a2c1e.webp',
+  },
+  {
+    id: 2,
+    name: 'BURGER KING',
+    description: 'Hambúrgueres suculentos',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_I3YPIg_image_f7e3d8c2.png',
+  },
+  {
+    id: 3,
+    name: 'GELA BOCA',
+    description: 'Sorvetes e gelados refrescantes',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_IrJub8_image_a2c5f1d9.png',
+  },
+];
+
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-  const [esgVisible, setEsgVisible] = useState(false);
-  const [lineupVisible, setLineupVisible] = useState(false);
-  const [partnersVisible, setPartnersVisible] = useState(false);
-  
-  const { ref: esgRef, isVisible: esgVisible2 } = useIntersectionObserver({ threshold: 0.2 });
-  const { ref: lineupRef, isVisible: lineupVisible2 } = useIntersectionObserver({ threshold: 0.1 });
-  const { ref: partnersRef, isVisible: partnersVisible2 } = useIntersectionObserver({ threshold: 0.2 });
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [expandedFaq, setExpandedFaq] = React.useState<number | null>(null);
 
-  useEffect(() => {
-    if (esgVisible2) setEsgVisible(true);
-  }, [esgVisible2]);
+  const { ref: esgRef, isVisible: esgVisible } = useIntersectionObserver();
+  const { ref: lineupRef, isVisible: lineupVisible } = useIntersectionObserver();
+  const { ref: foodTrucksRef, isVisible: foodTrucksVisible } = useIntersectionObserver();
+  const { ref: partnersRef, isVisible: partnersVisible } = useIntersectionObserver();
 
-  useEffect(() => {
-    if (lineupVisible2) setLineupVisible(true);
-  }, [lineupVisible2]);
-
-  useEffect(() => {
-    if (partnersVisible2) setPartnersVisible(true);
-  }, [partnersVisible2]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % ARTISTS.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + ARTISTS.length) % ARTISTS.length);
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % SCHEDULE.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + SCHEDULE.length) % SCHEDULE.length);
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_a1DrGS_image_0c8984ff.png)',
-          }}
-        >
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-48">
-        </div>
-
-        {/* Event Info Card */}
-        <div className="absolute bottom-8 right-8 bg-black/60 backdrop-blur-md border border-festival-yellow/30 rounded-2xl px-6 py-4 text-right hidden md:block">
-          <p className="text-festival-yellow text-sm font-bold mb-2">📍 19 DE SETEMBRO DE 2026</p>
-          <p className="text-white text-sm">MOURÃO GARDEN - CAMPO MOURÃO, PR</p>
-        </div>
-      </section>
-
-      {/* CTA Card Section */}
-      <section className="relative -mt-16 px-4 pb-20">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-gradient-to-r from-festival-pink to-festival-purple rounded-3xl shadow-2xl p-12 text-center relative z-20">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-              NÃO PERCA ESTE MOMENTO
-            </h2>
-            <p className="text-white text-lg mb-8 font-light">
-              Garanta seu ingresso agora e faça parte da história do 14º Festival de Rock
-            </p>
-            <Link href="#ingressos">
-              <Button className="bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple px-16 py-4 text-xl font-black rounded-full w-full sm:w-auto">
-                PRÉ-VENDA
-              </Button>
-            </Link>
+      <section className="relative h-screen bg-cover bg-center flex items-center justify-center" style={{
+        backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/hero-festival-cristofoli.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-16">
+          <div className="bg-gradient-to-r from-festival-pink to-festival-purple rounded-2xl p-8 max-w-2xl mx-4 shadow-2xl">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-4 text-center">NÃO PERCA ESTE MOMENTO</h2>
+            <p className="text-white text-center mb-6">Garanta seu ingresso agora e faça parte da história do 14º Festival de Rock</p>
+            <Button className="w-full bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black text-lg py-6">
+              PRÉ-VENDA
+            </Button>
           </div>
         </div>
-      </section>
 
-      {/* Carousel Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            ARTISTAS
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
-              CONFIRMADOS
-            </span>
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">Conheça as bandas que vão fazer história no palco</p>
-
-          {/* Carousel */}
-          <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg">
-            <div className="aspect-video bg-gray-900 relative">
-              <img
-                src={ARTISTS[currentSlide].image}
-                alt={ARTISTS[currentSlide].name}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-3xl font-black text-white mb-2">{ARTISTS[currentSlide].name}</h3>
-                <p className="text-festival-yellow font-bold mb-2">{ARTISTS[currentSlide].genre}</p>
-                <p className="text-white text-sm">{ARTISTS[currentSlide].time}</p>
-              </div>
-            </div>
-
-            {/* Navigation */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-festival-pink hover:bg-festival-pink/80 text-white p-3 rounded-full transition-all"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-festival-pink hover:bg-festival-pink/80 text-white p-3 rounded-full transition-all"
-            >
-              <ChevronRight size={24} />
-            </button>
-
-            {/* Indicators */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-              {ARTISTS.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    idx === currentSlide ? 'bg-festival-yellow w-8' : 'bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
+        {/* Date/Location Card */}
+        <div className="absolute bottom-8 right-8 bg-black/80 text-white px-6 py-4 rounded-lg">
+          <div className="flex items-center gap-2 mb-2">
+            <Calendar size={20} className="text-festival-yellow" />
+            <span className="font-bold">19 DE SETEMBRO DE 2026</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin size={20} className="text-festival-pink" />
+            <span>MOURÃO GARDEN - CAMPO MOURÃO, PR</span>
           </div>
         </div>
       </section>
 
       {/* Lineup Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-festival-purple/10 to-white">
+      <section ref={lineupRef} className="py-20 px-4 bg-gradient-to-b from-festival-purple/10 to-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             PROGRAMAÇÃO
@@ -254,45 +227,58 @@ export default function Home() {
               DO FESTIVAL
             </span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">Conheça a ordem das apresentações</p>
+          <p className="text-center text-gray-600 mb-16 text-lg">Conheça a ordem das apresentações em 2 palcos simultâneos</p>
 
-          {/* Timeline */}
-          <div className="relative">
-            {/* Vertical Line */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-festival-purple to-festival-pink"></div>
-
-            {/* Timeline Items */}
-            <div className="space-y-12">
-              {ARTISTS.map((artist, idx) => {
-                const isHeadliner = artist.name === 'Iron Maiden Cover Brasil' || artist.name === 'Candyman Club';
-                const isLeft = idx % 2 === 0;
-
-                return (
-                  <div key={artist.id} className="relative">
-                    <div className={`flex ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
-                      {/* Content */}
-                      <div className={`w-1/2 ${isLeft ? 'pr-12' : 'pl-12'}`}>
-                        <div className={`${isHeadliner ? 'bg-gradient-to-r from-festival-pink to-festival-purple' : 'bg-white'} rounded-xl p-6 shadow-lg border-2 ${isHeadliner ? 'border-festival-yellow' : 'border-gray-200'}`}>
-                          {isHeadliner && (
-                            <div className="flex items-center gap-2 mb-3">
-                              <span className="bg-festival-yellow text-festival-purple px-3 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
-                            </div>
-                          )}
-                          <h3 className={`text-xl font-black mb-1 ${isHeadliner ? 'text-white' : 'text-festival-purple'}`}>{artist.name}</h3>
-                          <p className={`text-sm font-bold mb-2 ${isHeadliner ? 'text-festival-yellow' : 'text-festival-pink'}`}>{artist.genre}</p>
-                          <p className={`text-sm ${isHeadliner ? 'text-white' : 'text-gray-600'}`}>{artist.time}</p>
-                        </div>
-                      </div>
-
-                      {/* Center Dot */}
-                      <div className="w-0 flex justify-center">
-                        <div className={`w-6 h-6 rounded-full ${isHeadliner ? 'bg-festival-yellow ring-4 ring-festival-yellow/30' : 'bg-festival-pink'} absolute top-8 z-10`}></div>
+          {/* Two Column Schedule */}
+          <div className="space-y-12">
+            {SCHEDULE.map((slot, idx) => (
+              <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="bg-gradient-to-r from-festival-purple to-festival-pink p-4">
+                  <h3 className="text-2xl font-black text-white text-center">{slot.time}</h3>
+                </div>
+                <div className="grid md:grid-cols-2 gap-0">
+                  {/* Stage 1 */}
+                  <div className={`p-6 border-r md:border-r-2 ${slot.stage1.isHeadliner ? 'bg-gradient-to-br from-festival-pink/20 to-festival-purple/20' : 'bg-white'}`}>
+                    <div className="flex items-start gap-4">
+                      <img src={slot.stage1.image} alt={slot.stage1.name} className="w-20 h-20 rounded-lg object-cover" />
+                      <div className="flex-1">
+                        {slot.stage1.isHeadliner && (
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="bg-festival-yellow text-festival-purple px-2 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
+                          </div>
+                        )}
+                        <h4 className={`font-black text-lg mb-1 ${slot.stage1.isHeadliner ? 'text-festival-purple' : 'text-gray-800'}`}>
+                          {slot.stage1.name}
+                        </h4>
+                        <p className={`text-sm ${slot.stage1.isHeadliner ? 'text-festival-pink font-bold' : 'text-gray-600'}`}>
+                          {slot.stage1.genre}
+                        </p>
                       </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
+
+                  {/* Stage 2 */}
+                  <div className={`p-6 ${slot.stage2.isHeadliner ? 'bg-gradient-to-br from-festival-pink/20 to-festival-purple/20' : 'bg-white'}`}>
+                    <div className="flex items-start gap-4">
+                      <img src={slot.stage2.image} alt={slot.stage2.name} className="w-20 h-20 rounded-lg object-cover" />
+                      <div className="flex-1">
+                        {slot.stage2.isHeadliner && (
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="bg-festival-yellow text-festival-purple px-2 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
+                          </div>
+                        )}
+                        <h4 className={`font-black text-lg mb-1 ${slot.stage2.isHeadliner ? 'text-festival-purple' : 'text-gray-800'}`}>
+                          {slot.stage2.name}
+                        </h4>
+                        <p className={`text-sm ${slot.stage2.isHeadliner ? 'text-festival-pink font-bold' : 'text-gray-600'}`}>
+                          {slot.stage2.genre}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -361,7 +347,7 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             PERGUNTAS
             <br />
@@ -373,30 +359,32 @@ export default function Home() {
 
           <div className="space-y-4">
             {FAQS.map((faq) => (
-              <div
+              <button
                 key={faq.id}
-                className={`${faq.color} rounded-2xl overflow-hidden border-2 border-dashed border-gray-300 transition-all`}
+                onClick={() => setExpandedFaq(expandedFaq === faq.id ? null : faq.id)}
+                className={`w-full text-left p-6 rounded-xl transition-all ${
+                  expandedFaq === faq.id ? faq.color : 'bg-white border-2 border-gray-200'
+                }`}
               >
-                <button
-                  onClick={() => setExpandedFaq(expandedFaq === faq.id ? null : faq.id)}
-                  className="w-full px-6 py-4 text-left font-bold text-lg flex justify-between items-center hover:opacity-80 transition-opacity"
-                >
-                  {faq.question}
-                  <span className="text-2xl">{expandedFaq === faq.id ? '−' : '+'}</span>
-                </button>
+                <div className="flex items-center justify-between">
+                  <h3 className={`font-black text-lg ${expandedFaq === faq.id ? 'text-white' : 'text-gray-800'}`}>
+                    {faq.question}
+                  </h3>
+                  <span className={`text-2xl font-black ${expandedFaq === faq.id ? 'text-white' : 'text-festival-pink'}`}>
+                    {expandedFaq === faq.id ? '−' : '+'}
+                  </span>
+                </div>
                 {expandedFaq === faq.id && (
-                  <div className="px-6 pb-4 text-gray-800 border-t-2 border-dashed border-gray-300 pt-4">
-                    {faq.answer}
-                  </div>
+                  <p className="text-white mt-4 text-sm leading-relaxed">{faq.answer}</p>
                 )}
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
 
       {/* Food Trucks Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section ref={foodTrucksRef} className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             FOOD
@@ -406,46 +394,34 @@ export default function Home() {
             </span>
           </h2>
           <p className="text-center text-gray-600 mb-12 text-lg">Deliciosas opções para você aproveitar o festival</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* KFC */}
-            <div className={`bg-white rounded-2xl border-4 border-festival-yellow p-8 text-center transform transition-all duration-500 ${
-              partnersVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`} style={{ transitionDelay: '0.1s' }}>
-              <div className="h-32 flex items-center justify-center mb-6">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_pL6OSy_image_72b8f2a3.webp" alt="KFC" className="max-h-full max-w-full object-contain" />
-              </div>
-              <h3 className="text-2xl font-bold text-festival-purple mb-2">KFC</h3>
-              <p className="text-gray-600">Frango crocante e delicioso</p>
-            </div>
 
-            {/* Burger King */}
-            <div className={`bg-white rounded-2xl border-4 border-festival-pink p-8 text-center transform transition-all duration-500 ${
-              partnersVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`} style={{ transitionDelay: '0.2s' }}>
-              <div className="h-32 flex items-center justify-center mb-6">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_I3YPIg_image_ac1adfc2.png" alt="Burger King" className="max-h-full max-w-full object-contain" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {FOOD_TRUCKS.map((truck, idx) => (
+              <div
+                key={truck.id}
+                className={`food-truck-card ${foodTrucksVisible ? 'animate-in' : ''} bg-white rounded-2xl overflow-hidden shadow-lg border-4 transition-all duration-500`}
+                style={{
+                  borderColor: idx === 0 ? '#FFD700' : idx === 1 ? '#FF1493' : '#7B2CBF',
+                  opacity: foodTrucksVisible ? 1 : 0,
+                  transform: foodTrucksVisible ? 'scale(1)' : 'scale(0.9)',
+                  transitionDelay: foodTrucksVisible ? `${idx * 100}ms` : '0ms',
+                }}
+              >
+                <img src={truck.image} alt={truck.name} className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-2xl font-black mb-2" style={{ color: idx === 0 ? '#FFD700' : idx === 1 ? '#FF1493' : '#7B2CBF' }}>
+                    {truck.name}
+                  </h3>
+                  <p className="text-gray-600">{truck.description}</p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-festival-purple mb-2">BURGER KING</h3>
-              <p className="text-gray-600">Hambúrgueres suculentos</p>
-            </div>
-
-            {/* Gela Boca */}
-            <div className={`bg-white rounded-2xl border-4 border-festival-purple p-8 text-center transform transition-all duration-500 ${
-              partnersVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`} style={{ transitionDelay: '0.3s' }}>
-              <div className="h-32 flex items-center justify-center mb-6">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_IrJub8_image_41446cbe.png" alt="Gela Boca" className="max-h-full max-w-full object-contain" />
-              </div>
-              <h3 className="text-2xl font-bold text-festival-purple mb-2">GELA BOCA</h3>
-              <p className="text-gray-600">Sorvetes e gelados refrescantes</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Partners Section */}
-      <section ref={partnersRef} className="py-20 px-4 bg-white">
+      <section ref={partnersRef} className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             NOSSOS
@@ -454,70 +430,38 @@ export default function Home() {
               PARCEIROS
             </span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">Empresas que tornam o Festival Cristófoli possível</p>
+          <p className="text-center text-gray-600 mb-12 text-lg">Empresas que tornam o Festival Cristófoli possível</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                id: 1,
-                name: 'Agenna Som',
-                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Ms8yur_image_e6a284cc.png',
-                color: 'border-festival-yellow',
-              },
-              {
-                id: 2,
-                name: 'Garcia Foods',
-                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ZiBEAT_image_5a88ed54.png',
-                color: 'border-festival-pink',
-              },
-              {
-                id: 3,
-                name: 'Mourão Garden',
-                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_FX4gyu_image_49b9c434.png',
-                color: 'border-festival-purple',
-              },
-              {
-                id: 4,
-                name: 'Cristófoli Biossegurança',
-                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_foV8Rv_image_5d8f50c2.png',
-                color: 'border-festival-neon',
-              },
-              {
-                id: 5,
-                name: 'Biovis',
-                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_c9ycqy_image_2fa8bf7e.png',
-                color: 'border-festival-yellow',
-              },
-            ].map((partner, idx) => (
+          <div className="grid md:grid-cols-5 gap-8">
+            {PARTNERS.map((partner, idx) => (
               <div
                 key={partner.id}
-                className={`partner-card ${partnersVisible ? 'animate-in' : ''} border-4 ${partner.color} rounded-2xl p-8 bg-white hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center`}
+                className={`partner-card ${partnersVisible ? 'animate-in' : ''} bg-white rounded-2xl overflow-hidden shadow-lg border-4 transition-all duration-500 flex flex-col items-center justify-center p-6`}
                 style={{
+                  borderColor: ['#FFD700', '#FF1493', '#7B2CBF', '#808080', '#FFD700'][idx % 5],
                   opacity: partnersVisible ? 1 : 0,
-                  transform: partnersVisible ? 'scale(1)' : 'scale(0.8)',
+                  transform: partnersVisible ? 'scale(1)' : 'scale(0.9)',
                   transitionDelay: partnersVisible ? `${idx * 100}ms` : '0ms',
                 }}
               >
-                <img src={partner.logo} alt={partner.name} className="h-24 mb-4 object-contain" />
-                <h3 className="text-xl font-bold text-center text-gray-800">{partner.name}</h3>
+                <img src={partner.image} alt={partner.name} className="w-full h-32 object-contain mb-4" />
+                <h3 className="text-center font-black text-sm">{partner.name}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="ingressos" className="py-20 px-4 bg-gradient-to-r from-festival-pink via-festival-purple to-festival-yellow">
+      {/* Final CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-festival-pink to-festival-purple">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             NÃO PERCA
             <br />
             O MAIOR FESTIVAL
           </h2>
-          <p className="text-white text-lg md:text-xl mb-8">
-            Garanta seu ingresso agora e faça parte da história do Festival Cristófoli 2026
-          </p>
-          <Button className="bg-white hover:bg-gray-100 text-festival-pink px-12 py-8 text-xl font-bold rounded-full">
+          <p className="text-white text-lg mb-8">Garanta seu ingresso agora e faça parte da história do Festival Cristófoli 2026</p>
+          <Button className="bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black text-lg px-8 py-6">
             COMPRAR INGRESSOS
           </Button>
         </div>
@@ -525,3 +469,5 @@ export default function Home() {
     </div>
   );
 }
+
+import React from 'react';
