@@ -204,25 +204,25 @@ const BEER_BRANDS = [
     id: 1,
     name: 'Eden Beer',
     description: 'Chopp artesanal premium',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EBsqWa_image_ff765a06.png',
   },
   {
     id: 2,
     name: '4Bodes',
     description: 'Chopp tradicional',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Zo6t46_image_48068bfb.png',
   },
   {
     id: 3,
     name: 'TAUA',
     description: 'Chopp regional',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_bFULsl_image_e23424af.png',
   },
   {
     id: 4,
-    name: 'Catedral',
-    description: 'Chopp clássico',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+    name: 'Araucária',
+    description: 'Cerveja artesanal',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_9MkUvS_image_803174a9.png',
   },
 ];
 
