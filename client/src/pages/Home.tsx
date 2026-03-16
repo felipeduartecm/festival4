@@ -488,6 +488,38 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-black mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Festival Cristófoli 2026</h3>
+              <p className="text-gray-400 mb-4">Um evento beneficente que celebra a música, solidariedade e impacto social.</p>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-festival-yellow font-black">✓</span>
+                <span className="text-gray-300">Evento 100% Beneficente</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-festival-pink font-black">✓</span>
+                <span className="text-gray-300">Renda revertida para instituições sociais</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-black mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Organização</h3>
+              <div className="bg-gray-800 rounded-lg p-4">
+                <p className="text-gray-300 mb-2"><span className="font-black text-festival-yellow">Clube da Cultura de Campo Mourão</span></p>
+                <p className="text-gray-400 text-sm mb-3">Organização sem fins lucrativos dedicada à promoção de eventos culturais e sociais.</p>
+                <p className="text-gray-400 text-xs"><span className="font-bold">CNPJ:</span> 28.115.716/0001-53</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 pt-8 text-center">
+            <p className="text-gray-400 text-sm mb-2">© 2026 Festival Cristófoli. Todos os direitos reservados.</p>
+            <p className="text-gray-500 text-xs">Desenvolvido com ♥ para a comunidade de Campo Mourão</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
