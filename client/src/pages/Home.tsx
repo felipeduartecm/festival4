@@ -199,12 +199,40 @@ const FOOD_TRUCKS = [
   },
 ];
 
+const BEER_BRANDS = [
+  {
+    id: 1,
+    name: 'Eden Beer',
+    description: 'Chopp artesanal premium',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+  },
+  {
+    id: 2,
+    name: '4Bodes',
+    description: 'Chopp tradicional',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+  },
+  {
+    id: 3,
+    name: 'TAUA',
+    description: 'Chopp regional',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+  },
+  {
+    id: 4,
+    name: 'Catedral',
+    description: 'Chopp clássico',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+  },
+];
+
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = React.useState<number | null>(null);
 
   const { ref: esgRef, isVisible: esgVisible } = useIntersectionObserver();
   const { ref: lineupRef, isVisible: lineupVisible } = useIntersectionObserver();
   const { ref: foodTrucksRef, isVisible: foodTrucksVisible } = useIntersectionObserver();
+  const { ref: beerBrandsRef, isVisible: beerBrandsVisible } = useIntersectionObserver();
   const { ref: partnersRef, isVisible: partnersVisible } = useIntersectionObserver();
 
   return (
@@ -435,6 +463,43 @@ export default function Home() {
                     {truck.name}
                   </h3>
                   <p className="text-gray-600">{truck.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Beer Brands Section */}
+      <section ref={beerBrandsRef} className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            MARCAS DE
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
+              CHOPP
+            </span>
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Cervejas artesanais e tradicionais para sua diversão</p>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {BEER_BRANDS.map((brand, idx) => (
+              <div
+                key={brand.id}
+                className={`beer-brand-card bg-white rounded-2xl overflow-hidden shadow-lg border-4 transition-all duration-500`}
+                style={{
+                  borderColor: ['#FFD700', '#FF1493', '#7B2CBF', '#00D084'][idx % 4],
+                  opacity: beerBrandsVisible ? 1 : 0,
+                  transform: beerBrandsVisible ? 'scale(1)' : 'scale(0.9)',
+                  transitionDelay: beerBrandsVisible ? `${idx * 100}ms` : '0ms',
+                }}
+              >
+                <img src={brand.image} alt={brand.name} className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-2xl font-black mb-2" style={{ color: ['#FFD700', '#FF1493', '#7B2CBF', '#00D084'][idx % 4] }}>
+                    {brand.name}
+                  </h3>
+                  <p className="text-gray-600">{brand.description}</p>
                 </div>
               </div>
             ))}
