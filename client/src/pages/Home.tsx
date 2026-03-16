@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, MapPin, Calendar, Users } from 'lucide-react';
@@ -17,7 +18,7 @@ const SCHEDULE = [
       id: 2,
       name: 'Banda Gurgel',
       genre: 'Rock Nacional',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/hero-festival-cristofoli.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
       isHeadliner: false,
     },
   },
@@ -66,19 +67,19 @@ const SCHEDULE = [
     },
     stage2: {
       id: 8,
-      name: 'Candyman Club',
-      genre: 'Sucessos dos Anos 80',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EMD929_image_ad8d3cc7.png',
-      isHeadliner: true,
+      name: 'System Of A Down',
+      genre: 'Cover Oficial Brasil',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_wIWkAI_image_ce35f691.png',
+      isHeadliner: false,
     },
   },
   {
     time: '18:00 - 19:30',
     stage1: {
       id: 9,
-      name: 'System Of A Down',
-      genre: 'Cover Oficial Brasil',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_wIWkAI_image_ce35f691.png',
+      name: 'Candyman Club',
+      genre: 'Sucessos dos Anos 80',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EMD929_image_ad8d3cc7.png',
       isHeadliner: true,
     },
     stage2: {
@@ -469,5 +470,3 @@ export default function Home() {
     </div>
   );
 }
-
-import React from 'react';
