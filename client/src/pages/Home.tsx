@@ -244,6 +244,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Lineup Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-festival-purple/10 to-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            PROGRAMAÇÃO
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
+              DO FESTIVAL
+            </span>
+          </h2>
+          <p className="text-center text-gray-600 mb-16 text-lg">Conheça a ordem das apresentações</p>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical Line */}
+            <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-festival-purple to-festival-pink"></div>
+
+            {/* Timeline Items */}
+            <div className="space-y-12">
+              {ARTISTS.map((artist, idx) => {
+                const isHeadliner = artist.name === 'Iron Maiden Cover Brasil' || artist.name === 'Candyman Club';
+                const isLeft = idx % 2 === 0;
+
+                return (
+                  <div key={artist.id} className="relative">
+                    <div className={`flex ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
+                      {/* Content */}
+                      <div className={`w-1/2 ${isLeft ? 'pr-12' : 'pl-12'}`}>
+                        <div className={`${isHeadliner ? 'bg-gradient-to-r from-festival-pink to-festival-purple' : 'bg-white'} rounded-xl p-6 shadow-lg border-2 ${isHeadliner ? 'border-festival-yellow' : 'border-gray-200'}`}>
+                          {isHeadliner && (
+                            <div className="flex items-center gap-2 mb-3">
+                              <span className="bg-festival-yellow text-festival-purple px-3 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
+                            </div>
+                          )}
+                          <h3 className={`text-xl font-black mb-1 ${isHeadliner ? 'text-white' : 'text-festival-purple'}`}>{artist.name}</h3>
+                          <p className={`text-sm font-bold mb-2 ${isHeadliner ? 'text-festival-yellow' : 'text-festival-pink'}`}>{artist.genre}</p>
+                          <p className={`text-sm ${isHeadliner ? 'text-white' : 'text-gray-600'}`}>{artist.time}</p>
+                        </div>
+                      </div>
+
+                      {/* Center Dot */}
+                      <div className="w-0 flex justify-center">
+                        <div className={`w-6 h-6 rounded-full ${isHeadliner ? 'bg-festival-yellow ring-4 ring-festival-yellow/30' : 'bg-festival-pink'} absolute top-8 z-10`}></div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ESG Section */}
       <section ref={esgRef} className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
