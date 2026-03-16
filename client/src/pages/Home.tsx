@@ -409,10 +409,10 @@ export default function Home() {
       <section ref={foodTrucksRef} className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            FOOD
+            PRAÇA
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
-              TRUCKS
+              ALIMENTAÇÃO
             </span>
           </h2>
           <p className="text-center text-gray-600 mb-12 text-lg">Deliciosas opções para você aproveitar o festival</p>
