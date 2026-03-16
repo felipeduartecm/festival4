@@ -215,6 +215,7 @@ export default function Home() {
         backgroundSize: 'contain',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        backgroundColor: '#5B1B8F',
         minHeight: '100vh',
       }}>
         <div className="absolute inset-0 bg-black/20"></div>
