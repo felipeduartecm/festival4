@@ -263,8 +263,8 @@ export default function Home() {
           <div className="space-y-6">
             {SCHEDULE.map((slot, idx) => (
               <div key={idx} className={`relative flex items-center gap-6 ${idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                {/* Timeline Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-festival-yellow rounded-full border-4 border-white shadow-lg z-10"></div>
+                {/* Timeline Dot - Hidden on Mobile */}
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-festival-yellow rounded-full border-4 border-white shadow-lg z-10"></div>
 
                 {/* Content Card */}
                 <div className={`w-full md:w-1/2 ${slot.band.isHeadliner ? 'bg-gradient-to-br from-festival-pink/20 to-festival-purple/20' : 'bg-white'} rounded-2xl shadow-lg border-2 ${slot.band.isHeadliner ? 'border-festival-pink' : 'border-gray-200'} p-6 transition-all duration-500`}
