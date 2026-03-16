@@ -69,6 +69,14 @@ const ARTISTS = [
     description: 'Apresentação dos alunos da escola de música',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
   },
+  {
+    id: 14,
+    name: 'Dirigível Cósmico',
+    genre: 'Tributo Led Zeppelin',
+    time: '18:00 - 19:00',
+    description: 'Tributo oficial ao Led Zeppelin',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_iyeNNY_image_4b855368.png',
+  },
 ];
 
 const FAQS = [
