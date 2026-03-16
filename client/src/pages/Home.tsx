@@ -213,19 +213,20 @@ export default function Home() {
       <section className="relative h-screen bg-cover bg-center flex items-center justify-center" style={{
         backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_a1DrGS_image_0c8984ff.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center top',
+        backgroundAttachment: 'fixed',
       }}>
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full"></div>
 
         {/* Date/Location Card */}
-        <div className="absolute bottom-8 right-8 bg-black/80 text-white px-6 py-4 rounded-lg">
+        <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8 bg-black/80 text-white px-4 md:px-6 py-3 md:py-4 rounded-lg text-sm md:text-base">
           <div className="flex items-center gap-2 mb-2">
-            <Calendar size={20} className="text-festival-yellow" />
+            <Calendar size={16} className="text-festival-yellow md:w-5 md:h-5" />
             <span className="font-bold">19 DE SETEMBRO DE 2026</span>
           </div>
           <div className="flex items-center gap-2">
-            <MapPin size={20} className="text-festival-pink" />
+            <MapPin size={16} className="text-festival-pink md:w-5 md:h-5" />
             <span>MOURÃO GARDEN - CAMPO MOURÃO, PR</span>
           </div>
         </div>
