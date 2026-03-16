@@ -7,14 +7,19 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 const SCHEDULE = [
   {
     time: '14:00 - 15:00',
-    stage1: {
+    stage: 'PALCO A',
+    band: {
       id: 1,
       name: 'Escola de Música Adriano Lima',
       genre: 'Apresentação Musical',
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
       isHeadliner: false,
     },
-    stage2: {
+  },
+  {
+    time: '15:00 - 16:00',
+    stage: 'PALCO B',
+    band: {
       id: 2,
       name: 'Banda Gurgel',
       genre: 'Rock Nacional',
@@ -23,15 +28,20 @@ const SCHEDULE = [
     },
   },
   {
-    time: '15:00 - 16:00',
-    stage1: {
+    time: '16:00 - 17:00',
+    stage: 'PALCO A',
+    band: {
       id: 3,
       name: 'Dirigível Cósmico',
       genre: 'Tributo Led Zeppelin',
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_iyeNNY_image_4b855368.png',
       isHeadliner: false,
     },
-    stage2: {
+  },
+  {
+    time: '17:00 - 18:00',
+    stage: 'PALCO B',
+    band: {
       id: 4,
       name: 'Raimundera Cover Oficial',
       genre: 'Rock Alternativo',
@@ -40,15 +50,20 @@ const SCHEDULE = [
     },
   },
   {
-    time: '16:00 - 17:00',
-    stage1: {
+    time: '18:00 - 19:00',
+    stage: 'PALCO A',
+    band: {
       id: 5,
       name: 'CPM22 Cover Brasil',
       genre: 'Rock Clássico',
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_3yYUug_image_114d681e.png',
       isHeadliner: false,
     },
-    stage2: {
+  },
+  {
+    time: '19:00 - 20:00',
+    stage: 'PALCO B',
+    band: {
       id: 6,
       name: 'B2S - Back 2 School',
       genre: '00\'s Hits',
@@ -57,15 +72,20 @@ const SCHEDULE = [
     },
   },
   {
-    time: '17:00 - 18:00',
-    stage1: {
+    time: '20:00 - 21:00',
+    stage: 'PALCO A',
+    band: {
       id: 7,
       name: 'Backdoors Band',
       genre: 'The Doors Cover Brasil',
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_GttyNF_image_a754cfff.png',
       isHeadliner: false,
     },
-    stage2: {
+  },
+  {
+    time: '21:00 - 22:00',
+    stage: 'PALCO B',
+    band: {
       id: 8,
       name: 'System Of A Down',
       genre: 'Cover Oficial Brasil',
@@ -74,15 +94,20 @@ const SCHEDULE = [
     },
   },
   {
-    time: '18:00 - 19:30',
-    stage1: {
+    time: '22:00 - 23:30',
+    stage: 'PALCO A',
+    band: {
       id: 9,
       name: 'Candyman Club',
       genre: 'Sucessos dos Anos 80',
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EMD929_image_ad8d3cc7.png',
       isHeadliner: true,
     },
-    stage2: {
+  },
+  {
+    time: '23:30 - 01:00',
+    stage: 'PALCO B',
+    band: {
       id: 10,
       name: 'Iron Maiden Cover Brasil',
       genre: 'Heavy Metal',
@@ -175,16 +200,12 @@ const FOOD_TRUCKS = [
 ];
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
   const [expandedFaq, setExpandedFaq] = React.useState<number | null>(null);
 
   const { ref: esgRef, isVisible: esgVisible } = useIntersectionObserver();
   const { ref: lineupRef, isVisible: lineupVisible } = useIntersectionObserver();
   const { ref: foodTrucksRef, isVisible: foodTrucksVisible } = useIntersectionObserver();
   const { ref: partnersRef, isVisible: partnersVisible } = useIntersectionObserver();
-
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % SCHEDULE.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + SCHEDULE.length) % SCHEDULE.length);
 
   return (
     <div className="min-h-screen bg-white">
@@ -220,7 +241,7 @@ export default function Home() {
 
       {/* Lineup Section */}
       <section ref={lineupRef} className="py-20 px-4 bg-gradient-to-b from-festival-purple/10 to-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             PROGRAMAÇÃO
             <br />
@@ -228,53 +249,45 @@ export default function Home() {
               DO FESTIVAL
             </span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">Conheça a ordem das apresentações em 2 palcos simultâneos</p>
+          <p className="text-center text-gray-600 mb-16 text-lg">Conheça a ordem das apresentações alternando entre os 2 palcos</p>
 
-          {/* Two Column Schedule */}
-          <div className="space-y-12">
+          {/* Schedule Timeline */}
+          <div className="space-y-6">
             {SCHEDULE.map((slot, idx) => (
-              <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-festival-purple to-festival-pink p-4">
-                  <h3 className="text-2xl font-black text-white text-center">{slot.time}</h3>
-                </div>
-                <div className="grid md:grid-cols-2 gap-0">
-                  {/* Stage 1 */}
-                  <div className={`p-6 border-r md:border-r-2 ${slot.stage1.isHeadliner ? 'bg-gradient-to-br from-festival-pink/20 to-festival-purple/20' : 'bg-white'}`}>
-                    <div className="flex items-start gap-4">
-                      <img src={slot.stage1.image} alt={slot.stage1.name} className="w-20 h-20 rounded-lg object-cover" />
-                      <div className="flex-1">
-                        {slot.stage1.isHeadliner && (
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-festival-yellow text-festival-purple px-2 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
-                          </div>
-                        )}
-                        <h4 className={`font-black text-lg mb-1 ${slot.stage1.isHeadliner ? 'text-festival-purple' : 'text-gray-800'}`}>
-                          {slot.stage1.name}
-                        </h4>
-                        <p className={`text-sm ${slot.stage1.isHeadliner ? 'text-festival-pink font-bold' : 'text-gray-600'}`}>
-                          {slot.stage1.genre}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+              <div key={idx} className={`relative flex items-center gap-6 ${idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                {/* Timeline Dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-festival-yellow rounded-full border-4 border-white shadow-lg z-10"></div>
 
-                  {/* Stage 2 */}
-                  <div className={`p-6 ${slot.stage2.isHeadliner ? 'bg-gradient-to-br from-festival-pink/20 to-festival-purple/20' : 'bg-white'}`}>
-                    <div className="flex items-start gap-4">
-                      <img src={slot.stage2.image} alt={slot.stage2.name} className="w-20 h-20 rounded-lg object-cover" />
-                      <div className="flex-1">
-                        {slot.stage2.isHeadliner && (
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-festival-yellow text-festival-purple px-2 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
-                          </div>
-                        )}
-                        <h4 className={`font-black text-lg mb-1 ${slot.stage2.isHeadliner ? 'text-festival-purple' : 'text-gray-800'}`}>
-                          {slot.stage2.name}
-                        </h4>
-                        <p className={`text-sm ${slot.stage2.isHeadliner ? 'text-festival-pink font-bold' : 'text-gray-600'}`}>
-                          {slot.stage2.genre}
-                        </p>
+                {/* Content Card */}
+                <div className={`w-full md:w-1/2 ${slot.band.isHeadliner ? 'bg-gradient-to-br from-festival-pink/20 to-festival-purple/20' : 'bg-white'} rounded-2xl shadow-lg border-2 ${slot.band.isHeadliner ? 'border-festival-pink' : 'border-gray-200'} p-6 transition-all duration-500`}
+                  style={{
+                    opacity: lineupVisible ? 1 : 0,
+                    transform: lineupVisible ? 'scale(1)' : 'scale(0.9)',
+                    transitionDelay: lineupVisible ? `${idx * 50}ms` : '0ms',
+                  }}
+                >
+                  <div className="flex items-start gap-4">
+                    <img src={slot.band.image} alt={slot.band.name} className="w-24 h-24 rounded-lg object-cover flex-shrink-0" />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-sm font-black text-festival-purple bg-festival-yellow px-3 py-1 rounded-full">
+                          {slot.time}
+                        </span>
+                        <span className={`text-xs font-black px-2 py-1 rounded-full ${slot.stage === 'PALCO A' ? 'bg-festival-purple text-white' : 'bg-festival-pink text-white'}`}>
+                          {slot.stage}
+                        </span>
                       </div>
+                      {slot.band.isHeadliner && (
+                        <div className="mb-2">
+                          <span className="bg-festival-yellow text-festival-purple px-2 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
+                        </div>
+                      )}
+                      <h4 className={`font-black text-lg mb-1 ${slot.band.isHeadliner ? 'text-festival-purple' : 'text-gray-800'}`}>
+                        {slot.band.name}
+                      </h4>
+                      <p className={`text-sm ${slot.band.isHeadliner ? 'text-festival-pink font-bold' : 'text-gray-600'}`}>
+                        {slot.band.genre}
+                      </p>
                     </div>
                   </div>
                 </div>
