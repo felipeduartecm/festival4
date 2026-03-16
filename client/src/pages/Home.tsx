@@ -374,6 +374,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Food Trucks Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            FOOD
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
+              TRUCKS
+            </span>
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Deliciosas opções para você aproveitar o festival</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* KFC */}
+            <div className={`bg-white rounded-2xl border-4 border-festival-yellow p-8 text-center transform transition-all duration-500 ${
+              partnersVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`} style={{ transitionDelay: '0.1s' }}>
+              <div className="h-32 flex items-center justify-center mb-6">
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_pL6OSy_image_72b8f2a3.webp" alt="KFC" className="max-h-full max-w-full object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold text-festival-purple mb-2">KFC</h3>
+              <p className="text-gray-600">Frango crocante e delicioso</p>
+            </div>
+
+            {/* Burger King */}
+            <div className={`bg-white rounded-2xl border-4 border-festival-pink p-8 text-center transform transition-all duration-500 ${
+              partnersVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`} style={{ transitionDelay: '0.2s' }}>
+              <div className="h-32 flex items-center justify-center mb-6">
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_I3YPIg_image_ac1adfc2.png" alt="Burger King" className="max-h-full max-w-full object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold text-festival-purple mb-2">BURGER KING</h3>
+              <p className="text-gray-600">Hambúrgueres suculentos</p>
+            </div>
+
+            {/* Gela Boca */}
+            <div className={`bg-white rounded-2xl border-4 border-festival-purple p-8 text-center transform transition-all duration-500 ${
+              partnersVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`} style={{ transitionDelay: '0.3s' }}>
+              <div className="h-32 flex items-center justify-center mb-6">
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_IrJub8_image_41446cbe.png" alt="Gela Boca" className="max-h-full max-w-full object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold text-festival-purple mb-2">GELA BOCA</h3>
+              <p className="text-gray-600">Sorvetes e gelados refrescantes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Partners Section */}
       <section ref={partnersRef} className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
