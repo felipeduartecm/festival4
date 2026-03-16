@@ -149,9 +149,11 @@ export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [esgVisible, setEsgVisible] = useState(false);
   const [lineupVisible, setLineupVisible] = useState(false);
+  const [partnersVisible, setPartnersVisible] = useState(false);
   
   const { ref: esgRef, isVisible: esgVisible2 } = useIntersectionObserver({ threshold: 0.2 });
   const { ref: lineupRef, isVisible: lineupVisible2 } = useIntersectionObserver({ threshold: 0.1 });
+  const { ref: partnersRef, isVisible: partnersVisible2 } = useIntersectionObserver({ threshold: 0.2 });
 
   useEffect(() => {
     if (esgVisible2) setEsgVisible(true);
@@ -160,6 +162,10 @@ export default function Home() {
   useEffect(() => {
     if (lineupVisible2) setLineupVisible(true);
   }, [lineupVisible2]);
+
+  useEffect(() => {
+    if (partnersVisible2) setPartnersVisible(true);
+  }, [partnersVisible2]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % ARTISTS.length);
@@ -362,6 +368,68 @@ export default function Home() {
                     {faq.answer}
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section ref={partnersRef} className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            NOSSOS
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
+              PARCEIROS
+            </span>
+          </h2>
+          <p className="text-center text-gray-600 mb-16 text-lg">Empresas que tornam o Festival Cristófoli possível</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                id: 1,
+                name: 'Agenna Som',
+                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Ms8yur_image_e6a284cc.png',
+                color: 'border-festival-yellow',
+              },
+              {
+                id: 2,
+                name: 'Garcia Foods',
+                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ZiBEAT_image_5a88ed54.png',
+                color: 'border-festival-pink',
+              },
+              {
+                id: 3,
+                name: 'Mourão Garden',
+                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_FX4gyu_image_49b9c434.png',
+                color: 'border-festival-purple',
+              },
+              {
+                id: 4,
+                name: 'Cristófoli Biossegurança',
+                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_foV8Rv_image_5d8f50c2.png',
+                color: 'border-festival-neon',
+              },
+              {
+                id: 5,
+                name: 'Biovis',
+                logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_c9ycqy_image_2fa8bf7e.png',
+                color: 'border-festival-yellow',
+              },
+            ].map((partner, idx) => (
+              <div
+                key={partner.id}
+                className={`partner-card ${partnersVisible ? 'animate-in' : ''} border-4 ${partner.color} rounded-2xl p-8 bg-white hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center`}
+                style={{
+                  opacity: partnersVisible ? 1 : 0,
+                  transform: partnersVisible ? 'scale(1)' : 'scale(0.8)',
+                  transitionDelay: partnersVisible ? `${idx * 100}ms` : '0ms',
+                }}
+              >
+                <img src={partner.logo} alt={partner.name} className="h-24 mb-4 object-contain" />
+                <h3 className="text-xl font-bold text-center text-gray-800">{partner.name}</h3>
               </div>
             ))}
           </div>
