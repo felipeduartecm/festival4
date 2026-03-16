@@ -309,35 +309,35 @@ export default function Home() {
       <section ref={esgRef} className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            COMPROMISSO
+            NOSSOS
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
-              ESG
+              PILARES
             </span>
           </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">Responsabilidade integral em três pilares</p>
+          <p className="text-center text-gray-600 mb-12 text-lg">O que torna o Festival Cristófoli especial</p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: '👥',
-                title: 'SOCIAL',
-                description: 'Impacto direto na comunidade através de doações, programas de inclusão e apoio a instituições locais.',
-                items: ['R$ 261 mil doados desde 2015', 'Parcerias com Lar Dona Jacira e Lar Dom Bosco', 'Inclusão e diversidade no lineup'],
-                color: 'bg-festival-pink/20 border-festival-pink',
-              },
-              {
-                icon: '🌍',
-                title: 'AMBIENTAL',
-                description: 'Práticas sustentáveis para minimizar impacto ambiental e promover consciência ecológica.',
-                items: ['Gestão responsável de resíduos', 'Uso de energia renovável', 'Redução de plástico descartável', 'Compensação de carbono'],
+                icon: '🎸',
+                title: 'MÚSICA',
+                description: 'Celebramos a música como força transformadora, reunindo artistas e fãs em um espaço de expressão e criatividade.',
+                items: ['10 bandas em apresentações ao vivo', 'Palcos simultâneos para máxima experiência', 'Artistas locais e regionais em destaque', 'Sucessos dos anos 80 ao rock moderno'],
                 color: 'bg-festival-yellow/20 border-festival-yellow',
               },
               {
-                icon: '⚖️',
-                title: 'GOVERNANÇA',
-                description: 'Transparência, ética e conformidade em todas as operações e decisões do festival.',
-                items: ['Transparência financeira e relatórios públicos', 'Código de conduta ético', 'Conformidade com legislação local', 'Gestão responsável de parcerias'],
+                icon: '💜',
+                title: 'SOLIDARIEDADE',
+                description: 'Comprometidos com o bem-estar social, revertemos parte da renda para instituições que cuidam de quem mais precisa.',
+                items: ['R$ 261 mil doados desde 2015', 'Parcerias com Lar Dona Jacira e Lar Dom Bosco', 'Ingresso solidário com impacto direto', 'Comunidade unida por um propósito'],
+                color: 'bg-festival-pink/20 border-festival-pink',
+              },
+              {
+                icon: '🤝',
+                title: 'IMPACTO SOCIAL',
+                description: 'Geramos oportunidades e transformação através da inclusão, diversidade e engajamento comunitário.',
+                items: ['Inclusão e diversidade no lineup', 'Oportunidades para artistas locais', 'Engajamento com a comunidade', 'Impacto econômico para a região'],
                 color: 'bg-festival-purple/20 border-festival-purple',
               },
             ].map((pillar, idx) => (
