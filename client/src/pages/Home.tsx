@@ -21,9 +21,9 @@ const SCHEDULE = [
     stage: 'PALCO B',
     band: {
       id: 2,
-      name: 'Banda Gurgel',
-      genre: 'Rock Nacional',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+      name: 'Banda Underdogs',
+      genre: 'Classic Rock Tribute',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/bandaunderdogs_799681e6.png',
       isHeadliner: false,
     },
   },
