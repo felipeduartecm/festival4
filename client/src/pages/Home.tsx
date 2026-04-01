@@ -539,6 +539,110 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sponsors Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            SEJA UM
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
+              PATROCINADOR
+            </span>
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Associe sua marca ao maior festival de rock de Campo Mourão</p>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Ouro */}
+            <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl p-8 text-white shadow-2xl transform hover:scale-105 transition-transform">
+              <div className="text-5xl font-black mb-4">👑</div>
+              <h3 className="text-3xl font-black mb-4">OURO</h3>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Logo em destaque no site</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Branding no palco</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Menção em redes sociais</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Espaço VIP no festival</span>
+                </li>
+              </ul>
+              <p className="text-sm font-bold">Máximo impacto e visibilidade</p>
+            </div>
+
+            {/* Prata */}
+            <div className="bg-gradient-to-br from-gray-300 to-gray-500 rounded-2xl p-8 text-white shadow-2xl transform hover:scale-105 transition-transform">
+              <div className="text-5xl font-black mb-4">⭐</div>
+              <h3 className="text-3xl font-black mb-4">PRATA</h3>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Logo no site</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Branding no festival</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Menção em redes sociais</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Ingressos cortesia</span>
+                </li>
+              </ul>
+              <p className="text-sm font-bold">Visibilidade estratégica</p>
+            </div>
+
+            {/* Bronze */}
+            <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl p-8 text-white shadow-2xl transform hover:scale-105 transition-transform">
+              <div className="text-5xl font-black mb-4">🎸</div>
+              <h3 className="text-3xl font-black mb-4">BRONZE</h3>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Logo no site</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Menção em redes sociais</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Apoio ao evento</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-black">✓</span>
+                  <span>Certificado de apoio</span>
+                </li>
+              </ul>
+              <p className="text-sm font-bold">Comece sua parceria</p>
+            </div>
+          </div>
+
+          {/* Media Kit Download */}
+          <div className="bg-gradient-to-r from-festival-purple to-festival-pink rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-black text-white mb-4">Interessado em Patrocinar?</h3>
+            <p className="text-white mb-6">Baixe nosso Media Kit com todas as informações sobre oportunidades de patrocínio</p>
+            <a
+              href="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/Mediakit2026(v5)_ec46269d.pdf"
+              download
+              className="inline-block bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black py-3 px-8 rounded-lg transition-all"
+            >
+              📥 BAIXAR MEDIA KIT
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-festival-pink to-festival-purple">
         <div className="max-w-4xl mx-auto text-center">
