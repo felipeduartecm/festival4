@@ -44,7 +44,7 @@ const SCHEDULE = [
     band: {
       id: 4,
       name: 'Raimundera Cover Oficial',
-      genre: 'Rock Alternativo',
+      genre: 'Raimundos Cover Oficial',
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_oI9m16_image_29c294f3.png',
       isHeadliner: false,
     },
