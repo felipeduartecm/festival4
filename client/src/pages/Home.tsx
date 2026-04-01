@@ -226,6 +226,26 @@ const BEER_BRANDS = [
   },
 ];
 
+interface Sponsor {
+  id: number;
+  name: string;
+  category: string;
+  logo: string;
+}
+
+const SPONSORS: { gold: Sponsor[]; silver: Sponsor[]; bronze: Sponsor[] } = {
+  gold: [
+    {
+      id: 1,
+      name: 'Pro Solus',
+      category: 'Tecnologia Agrícola',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_KIjwiD_image_b2ee7c58.png',
+    },
+  ],
+  silver: [],
+  bronze: [],
+};
+
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = React.useState<number | null>(null);
 
@@ -627,6 +647,62 @@ export default function Home() {
               <p className="text-sm font-bold">Comece sua parceria</p>
             </div>
           </div>
+
+          {/* Confirmed Sponsors */}
+          {(SPONSORS.gold.length > 0 || SPONSORS.silver.length > 0 || SPONSORS.bronze.length > 0) && (
+            <div className="mt-16 pt-12 border-t-4 border-festival-yellow">
+              <h3 className="text-3xl font-black text-center mb-12" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                PATROCINADORES CONFIRMADOS
+              </h3>
+
+              {/* Gold Sponsors */}
+              {SPONSORS.gold.length > 0 && (
+                <div className="mb-12">
+                  <h4 className="text-2xl font-black text-yellow-600 mb-6 text-center">👑 OURO</h4>
+                  <div className="grid md:grid-cols-2 gap-8 justify-items-center">
+                    {SPONSORS.gold.map((sponsor) => (
+                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                        <img src={sponsor.logo} alt={sponsor.name} className="h-24 object-contain mx-auto mb-4" />
+                        <h5 className="font-black text-center text-gray-800">{sponsor.name}</h5>
+                        <p className="text-sm text-gray-600 text-center">{sponsor.category}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Silver Sponsors */}
+              {SPONSORS.silver.length > 0 && (
+                <div className="mb-12">
+                  <h4 className="text-2xl font-black text-gray-500 mb-6 text-center">⭐ PRATA</h4>
+                  <div className="grid md:grid-cols-3 gap-6 justify-items-center">
+                    {SPONSORS.silver.map((sponsor) => (
+                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                        <img src={sponsor.logo} alt={sponsor.name} className="h-20 object-contain mx-auto mb-4" />
+                        <h5 className="font-black text-center text-gray-800 text-sm">{sponsor.name}</h5>
+                        <p className="text-xs text-gray-600 text-center">{sponsor.category}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Bronze Sponsors */}
+              {SPONSORS.bronze.length > 0 && (
+                <div>
+                  <h4 className="text-2xl font-black text-orange-600 mb-6 text-center">🎸 BRONZE</h4>
+                  <div className="grid md:grid-cols-4 gap-4 justify-items-center">
+                    {SPONSORS.bronze.map((sponsor) => (
+                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                        <img src={sponsor.logo} alt={sponsor.name} className="h-16 object-contain mx-auto mb-3" />
+                        <h5 className="font-black text-center text-gray-800 text-xs">{sponsor.name}</h5>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Media Kit Download */}
           <div className="bg-gradient-to-r from-festival-purple to-festival-pink rounded-2xl p-8 text-center">
