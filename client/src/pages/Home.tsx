@@ -186,6 +186,11 @@ const PARTNERS = [
     name: 'PDV365',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ClSgMj_image_664b6fe9.png',
   },
+  {
+    id: 8,
+    name: 'VIEX',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Pb3rsY_image_169f56f4.png',
+  },
 ];
 
 const FOOD_TRUCKS = [
