@@ -258,14 +258,16 @@ interface Sponsor {
   logo: string;
 }
 
-const SPONSORS: { gold: Sponsor[]; silver: Sponsor[]; bronze: Sponsor[] } = {
-  gold: [
+const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze: Sponsor[] } = {
+  diamond: [
     {
       id: 1,
       name: 'Pro Solus',
       category: 'Tecnologia Agrícola',
       logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_KIjwiD_image_b2ee7c58.png',
     },
+  ],
+  gold: [
     {
       id: 2,
       name: 'Cristófoli',
@@ -686,11 +688,25 @@ export default function Home() {
           </div>
 
           {/* Confirmed Sponsors */}
-          {(SPONSORS.gold.length > 0 || SPONSORS.silver.length > 0 || SPONSORS.bronze.length > 0) && (
+          {(SPONSORS.diamond.length > 0 || SPONSORS.gold.length > 0 || SPONSORS.silver.length > 0 || SPONSORS.bronze.length > 0) && (
             <div className="mt-16 pt-12 border-t-4 border-festival-yellow">
               <h3 className="text-3xl font-black text-center mb-12" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 PATROCINADORES CONFIRMADOS
               </h3>
+
+              {/* Diamond Sponsors */}
+              {SPONSORS.diamond.length > 0 && (
+                <div className="mb-12">
+                  <h4 className="text-2xl font-black text-blue-600 mb-6 text-center">💎 DIAMANTE</h4>
+                  <div className="flex flex-wrap justify-center gap-8">
+                    {SPONSORS.diamond.map((sponsor) => (
+                      <div key={sponsor.id} className="bg-white rounded-2xl overflow-hidden shadow-lg border-4 border-blue-500 flex flex-col items-center justify-center p-6 w-40">
+                        <img src={sponsor.logo} alt={sponsor.name} className="w-full h-32 object-contain" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Gold Sponsors */}
               {SPONSORS.gold.length > 0 && (
