@@ -430,24 +430,15 @@ export default function Home() {
             ].map((pillar, idx) => (
               <div
                 key={idx}
-                className={`esg-card ${esgVisible ? 'animate-in' : ''} ${pillar.color} border-2 rounded-2xl p-8 transition-all duration-500`}
+                className={`esg-card ${esgVisible ? 'animate-in' : ''} ${pillar.color} border-2 rounded-2xl p-8 transition-all duration-500 flex flex-col items-center justify-center`}
                 style={{
                   opacity: esgVisible ? 1 : 0,
                   transform: esgVisible ? 'translateY(0)' : 'translateY(20px)',
                   transitionDelay: esgVisible ? `${idx * 100}ms` : '0ms',
                 }}
               >
-                <div className="text-5xl mb-4">{pillar.icon}</div>
-                <h3 className="text-2xl font-black mb-3">{pillar.title}</h3>
-                <p className="text-gray-700 mb-6">{pillar.description}</p>
-                <ul className="space-y-2">
-                  {pillar.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
-                      <span className="text-festival-yellow font-bold">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="text-6xl mb-4">{pillar.icon}</div>
+                <h3 className="text-2xl font-black text-center">{pillar.title}</h3>
               </div>
             ))}
           </div>
