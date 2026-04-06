@@ -465,7 +465,7 @@ export default function Home() {
               {/* Right side - Content */}
               <div className="p-12 flex flex-col justify-center">
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Parte da renda arrecadada será destinada a ações sociais que promovem <span className="font-black text-festival-pink">acolhimento, apoio e oportunidades para mulheres</span>.
+                  Parte da doação será destinada para <span className="font-black text-festival-pink">entidades sociais que promovem acolhimento, apoio e oportunidades para mulheres</span>.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
