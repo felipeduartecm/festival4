@@ -445,6 +445,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projeto Mulher Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-festival-pink">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Left side - Icons and Title */}
+              <div className="bg-gradient-to-br from-festival-pink to-festival-purple p-12 flex flex-col items-center justify-center text-white">
+                <div className="text-7xl mb-4">👩</div>
+                <div className="text-6xl mb-6">💪</div>
+                <h2 className="text-4xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  PROJETO
+                </h2>
+                <h2 className="text-5xl font-black text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  MULHER
+                </h2>
+              </div>
+              
+              {/* Right side - Content */}
+              <div className="p-12 flex flex-col justify-center">
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Parte da renda arrecadada será destinada a ações sociais que promovem <span className="font-black text-festival-pink">acolhimento, apoio e oportunidades para mulheres</span>.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">✨</span>
+                    <p className="text-gray-700"><span className="font-black">Acolhimento:</span> Espaços seguros e acolhedores</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🤝</span>
+                    <p className="text-gray-700"><span className="font-black">Apoio:</span> Suporte integral e contínuo</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🚀</span>
+                    <p className="text-gray-700"><span className="font-black">Oportunidades:</span> Caminhos para crescimento</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
