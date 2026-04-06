@@ -191,6 +191,11 @@ const PARTNERS = [
     name: 'VIEX',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_y5Q1Dw_logotapp_695ea81f.png',
   },
+  {
+    id: 9,
+    name: 'CINEMAX',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_KrkKy9_image_b5ceca31.png',
+  },
 ];
 
 const FOOD_TRUCKS = [
