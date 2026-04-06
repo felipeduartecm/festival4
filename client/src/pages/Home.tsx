@@ -176,6 +176,11 @@ const PARTNERS = [
     name: 'Biovis',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_c9ycqy_image_2fa8bf7e.png',
   },
+  {
+    id: 6,
+    name: 'SESC Mesa Brasil',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Y5M3Mj_image_4bb88910.png',
+  },
 ];
 
 const FOOD_TRUCKS = [
