@@ -181,6 +181,11 @@ const PARTNERS = [
     name: 'SESC Mesa Brasil',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Y5M3Mj_image_4bb88910.png',
   },
+  {
+    id: 7,
+    name: 'PDV365',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ClSgMj_image_664b6fe9.png',
+  },
 ];
 
 const FOOD_TRUCKS = [
