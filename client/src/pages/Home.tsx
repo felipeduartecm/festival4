@@ -266,6 +266,18 @@ const SPONSORS: { gold: Sponsor[]; silver: Sponsor[]; bronze: Sponsor[] } = {
       category: 'Tecnologia Agrícola',
       logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_KIjwiD_image_b2ee7c58.png',
     },
+    {
+      id: 2,
+      name: 'Cristófoli',
+      category: 'Biossegurança',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_IEtufi_image_55b9c0cc.png',
+    },
+    {
+      id: 3,
+      name: 'Biovis',
+      category: 'Higiene e Limpeza',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_MaWerl_image_c6f43804.png',
+    },
   ],
   silver: [],
   bronze: [],
