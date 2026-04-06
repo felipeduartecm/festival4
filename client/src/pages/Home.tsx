@@ -196,6 +196,11 @@ const PARTNERS = [
     name: 'CINEMAXS',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_KrkKy9_image_b5ceca31.png',
   },
+  {
+    id: 10,
+    name: 'BLZ Soluções WEB',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_2vpST1_image_d2d05f1c.png',
+  },
 ];
 
 const FOOD_TRUCKS = [
