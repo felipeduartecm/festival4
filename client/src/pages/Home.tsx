@@ -189,7 +189,7 @@ const PARTNERS = [
   {
     id: 8,
     name: 'VIEX',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Pb3rsY_image_169f56f4.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_y5Q1Dw_logotapp_695ea81f.png',
   },
 ];
 
