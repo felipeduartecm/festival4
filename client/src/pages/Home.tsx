@@ -545,11 +545,10 @@ export default function Home() {
                 }}
               >
                 <img src={brand.image} alt={brand.name} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-2xl font-black mb-2" style={{ color: ['#FFD700', '#FF1493', '#7B2CBF', '#00D084'][idx % 4] }}>
+                <div className="p-6 text-center">
+                  <h3 className="text-2xl font-black" style={{ color: ['#FFD700', '#FF1493', '#7B2CBF', '#00D084'][idx % 4] }}>
                     {brand.name}
                   </h3>
-                  <p className="text-gray-600">{brand.description}</p>
                 </div>
               </div>
             ))}
