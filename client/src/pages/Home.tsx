@@ -206,6 +206,11 @@ const PARTNERS = [
     name: 'Walter Natálio Fotografia',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Np5xot_walter-assinatura_58829ae2.webp',
   },
+  {
+    id: 12,
+    name: 'Covers do Brasil',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_BjqJAT_image_b473ff46.png',
+  },
 ];
 
 const FOOD_TRUCKS = [
