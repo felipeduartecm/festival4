@@ -467,7 +467,10 @@ export default function Home() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center">
                   Parte da doação será destinada para <span className="font-black text-festival-pink">entidades sociais que promovem acolhimento, apoio e oportunidades para mulheres</span>.
                 </p>
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_JK6c1q_image_ab2935e7.png" alt="Lar Dom Bosco" className="h-24 object-contain" />
+                <div className="flex gap-8 items-center justify-center flex-wrap">
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_JK6c1q_image_ab2935e7.png" alt="Lar Dom Bosco" className="h-24 object-contain" />
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_LKFisx_image_9cd50758.png" alt="CRAM Campo Mourão" className="h-24 object-contain" />
+                </div>
               </div>
             </div>
           </div>
