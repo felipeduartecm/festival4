@@ -467,20 +467,7 @@ export default function Home() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   Parte da doação será destinada para <span className="font-black text-festival-pink">entidades sociais que promovem acolhimento, apoio e oportunidades para mulheres</span>.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">✨</span>
-                    <p className="text-gray-700"><span className="font-black">Acolhimento:</span> Espaços seguros e acolhedores</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">🤝</span>
-                    <p className="text-gray-700"><span className="font-black">Apoio:</span> Suporte integral e contínuo</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">🚀</span>
-                    <p className="text-gray-700"><span className="font-black">Oportunidades:</span> Caminhos para crescimento</p>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
