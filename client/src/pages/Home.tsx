@@ -201,6 +201,11 @@ const PARTNERS = [
     name: 'BLZ Soluções WEB',
     image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_2vpST1_image_d2d05f1c.png',
   },
+  {
+    id: 11,
+    name: 'Walter Natálio Fotografia',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Np5xot_walter-assinatura_58829ae2.webp',
+  },
 ];
 
 const FOOD_TRUCKS = [
