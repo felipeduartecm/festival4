@@ -698,10 +698,8 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-yellow-600 mb-6 text-center">👑 OURO</h4>
                   <div className="flex flex-wrap justify-center gap-8">
                     {SPONSORS.gold.map((sponsor) => (
-                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow w-full md:w-80">
-                        <img src={sponsor.logo} alt={sponsor.name} className="h-24 object-contain mx-auto mb-4" />
-                        <h5 className="font-black text-center text-gray-800">{sponsor.name}</h5>
-                        <p className="text-sm text-gray-600 text-center">{sponsor.category}</p>
+                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                        <img src={sponsor.logo} alt={sponsor.name} className="h-24 object-contain" />
                       </div>
                     ))}
                   </div>
@@ -714,10 +712,8 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-gray-500 mb-6 text-center">⭐ PRATA</h4>
                   <div className="flex flex-wrap justify-center gap-6">
                     {SPONSORS.silver.map((sponsor) => (
-                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow w-full md:w-72">
-                        <img src={sponsor.logo} alt={sponsor.name} className="h-20 object-contain mx-auto mb-4" />
-                        <h5 className="font-black text-center text-gray-800 text-sm">{sponsor.name}</h5>
-                        <p className="text-xs text-gray-600 text-center">{sponsor.category}</p>
+                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                        <img src={sponsor.logo} alt={sponsor.name} className="h-20 object-contain" />
                       </div>
                     ))}
                   </div>
@@ -730,9 +726,8 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-orange-600 mb-6 text-center">🎸 BRONZE</h4>
                   <div className="flex flex-wrap justify-center gap-4">
                     {SPONSORS.bronze.map((sponsor) => (
-                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow w-full md:w-64">
-                        <img src={sponsor.logo} alt={sponsor.name} className="h-16 object-contain mx-auto mb-3" />
-                        <h5 className="font-black text-center text-gray-800 text-xs">{sponsor.name}</h5>
+                      <div key={sponsor.id} className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                        <img src={sponsor.logo} alt={sponsor.name} className="h-16 object-contain" />
                       </div>
                     ))}
                   </div>
