@@ -474,7 +474,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Left side - Icons and Title */}
               <div className="bg-gradient-to-br from-festival-pink to-festival-purple p-12 flex flex-col items-center justify-center text-white">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_SCRJD6_image_ee9820b2.png" alt="Projeto Mulher" className="h-48 mb-6 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EKBL1R_Gemini_Generated_Image_misxs8misxs8misx_331c6fef.png" alt="Projeto Mulher" className="h-48 mb-6 object-contain" />
                 <h2 className="text-4xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   PROJETO
                 </h2>
