@@ -297,7 +297,14 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
     },
   ],
   silver: [],
-  bronze: [],
+  bronze: [
+    {
+      id: 4,
+      name: 'Zacarias Veículos',
+      category: 'Automóvel',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_W9eraY_image_8dbabc1a.png',
+    },
+  ],
 };
 
 export default function Home() {
