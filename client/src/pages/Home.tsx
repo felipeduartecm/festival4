@@ -376,15 +376,15 @@ export default function Home() {
                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-festival-yellow rounded-full border-4 border-white shadow-lg z-10"></div>
 
                 {/* Content Card */}
-                <div className={`w-full md:w-1/2 ${slot.band.isHeadliner ? 'bg-gradient-to-br from-festival-pink/20 to-festival-purple/20' : 'bg-white'} rounded-2xl shadow-lg border-2 ${slot.band.isHeadliner ? 'border-festival-pink' : 'border-gray-200'} p-6 transition-all duration-500`}
+                <div className={`${slot.band.isHeadliner ? 'w-full md:w-3/5' : 'w-full md:w-1/2'} ${slot.band.isHeadliner ? 'bg-gradient-to-br from-festival-pink to-festival-purple' : 'bg-white'} rounded-2xl shadow-lg border-2 ${slot.band.isHeadliner ? 'border-festival-yellow' : 'border-gray-200'} p-6 transition-all duration-500 ${slot.band.isHeadliner ? 'md:shadow-2xl' : ''}`}
                   style={{
                     opacity: lineupVisible ? 1 : 0,
                     transform: lineupVisible ? 'scale(1)' : 'scale(0.9)',
                     transitionDelay: lineupVisible ? `${idx * 50}ms` : '0ms',
                   }}
                 >
-                  <div className="flex items-start gap-4">
-                    <img src={slot.band.image} alt={slot.band.name} className="w-24 h-24 rounded-lg object-cover flex-shrink-0" />
+                      <div className={`flex items-start gap-4 ${slot.band.isHeadliner ? 'md:gap-6' : ''}`}>
+                    <img src={slot.band.image} alt={slot.band.name} className={`${slot.band.isHeadliner ? 'w-32 h-32' : 'w-24 h-24'} rounded-lg object-cover flex-shrink-0`} />
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-sm font-black text-festival-purple bg-festival-yellow px-3 py-1 rounded-full">
@@ -399,10 +399,10 @@ export default function Home() {
                           <span className="bg-festival-yellow text-festival-purple px-2 py-1 rounded-full text-xs font-black">⭐ HEADLINER</span>
                         </div>
                       )}
-                      <h4 className={`font-black text-lg mb-1 ${slot.band.isHeadliner ? 'text-festival-purple' : 'text-gray-800'}`}>
+                      <h4 className={`font-black mb-1 ${slot.band.isHeadliner ? 'text-white text-3xl' : 'text-gray-800 text-lg'}`}>
                         {slot.band.name}
                       </h4>
-                      <p className={`text-sm ${slot.band.isHeadliner ? 'text-festival-pink font-bold' : 'text-gray-600'}`}>
+                      <p className={`${slot.band.isHeadliner ? 'text-white font-bold text-base' : 'text-gray-600 text-sm'}`}>
                         {slot.band.genre}
                       </p>
                     </div>
