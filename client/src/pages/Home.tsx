@@ -296,7 +296,14 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_MaWerl_image_c6f43804.png',
     },
   ],
-  silver: [],
+  silver: [
+    {
+      id: 5,
+      name: 'PONCE',
+      category: 'Tecnologia',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_zgRlrq_image_0a42e2cf.png',
+    },
+  ],
   bronze: [
     {
       id: 4,
