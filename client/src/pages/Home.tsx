@@ -133,7 +133,7 @@ const FAQS = [
   {
     id: 3,
     question: 'Como funciona o ingresso solidário?',
-    answer: 'O ingresso solidário permite que você contribua com instituições sociais. Parte do valor do ingresso é revertida para nossas parcerias com Lar Dona Jacira e Lar Dom Bosco.',
+    answer: 'O ingresso solidário é uma forma de você contribuir diretamente com instituições sociais parceiras. Ao adquirir este ingresso, você garante sua entrada no festival E contribui com 1 kg de alimento não-perecível que será doado para o Lar Dom Bosco e CRAM, ajudando a transformar vidas na comunidade.',
     color: 'bg-festival-yellow',
   },
   {
