@@ -315,6 +315,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Educação',
       logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Q1wGnj_image_5d1d350e.png',
     },
+    {
+      id: 8,
+      name: 'VOLLENZ',
+      category: 'Tecnologia',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_tm4N4d_image_c12a4eae.png',
+    },
   ],
   bronze: [
     {
