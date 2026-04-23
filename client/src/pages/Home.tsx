@@ -139,7 +139,7 @@ const FAQS = [
   {
     id: 4,
     question: 'Quem tem direito à meia-entrada?',
-    answer: 'Estudantes, idosos acima de 60 anos, pessoas com deficiência e seus acompanhantes têm direito à meia-entrada. É necessário apresentar documento comprobatório.',
+    answer: 'No Paraná, a meia-entrada (50% de desconto) é garantida por leis federais e estaduais para: estudantes, idosos (60+), pessoas com deficiência, jovens de baixa renda (15-29 anos), professores da rede pública/privada (Lei 15.876/2008) e profissionais de saúde (Lei 22.235/2024). É obrigatório apresentar documento comprobatório válido na entrada.',
     color: 'bg-festival-pink',
   },
   {
