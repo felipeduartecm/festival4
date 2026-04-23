@@ -303,6 +303,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Tecnologia',
       logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_zgRlrq_image_0a42e2cf.png',
     },
+    {
+      id: 6,
+      name: 'ATLA',
+      category: 'Consultoria',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_eMGfP5_image_63d65955.png',
+    },
   ],
   bronze: [
     {
