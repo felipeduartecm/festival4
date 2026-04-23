@@ -133,7 +133,7 @@ const FAQS = [
   {
     id: 3,
     question: 'Como funciona o ingresso solidário?',
-    answer: 'O ingresso solidário é uma forma de você contribuir diretamente com instituições sociais parceiras. Ao adquirir este ingresso, você garante sua entrada no festival E contribui com 1 kg de alimento não-perecível que será doado para o Lar Dom Bosco e CRAM, ajudando a transformar vidas na comunidade.',
+    answer: 'O ingresso solidário é uma forma de você contribuir diretamente com instituições sociais. Ao adquirir este ingresso, você garante sua entrada no festival E contribui com 1 kg de alimento não-perecível que será doado para o programa MESA BRASIL do SESC, ajudando a alimentar famílias em situação de vulnerabilidade na comunidade.',
     color: 'bg-festival-yellow',
   },
   {
