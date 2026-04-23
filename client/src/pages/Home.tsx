@@ -625,7 +625,7 @@ export default function Home() {
             {PARTNERS.map((partner, idx) => (
               <div
                 key={partner.id}
-                className={`partner-card ${partnersVisible ? 'animate-in' : ''} bg-white rounded-2xl overflow-hidden shadow-lg border-4 transition-all duration-500 flex flex-col items-center justify-center p-6`}
+                className={`partner-card ${partnersVisible ? 'animate-in' : ''} bg-white rounded-2xl overflow-hidden shadow-lg border-4 transition-all duration-300 flex flex-col items-center justify-center p-6 hover:shadow-2xl hover:scale-105 cursor-pointer`}
                 style={{
                   borderColor: ['#FFD700', '#FF1493', '#7B2CBF', '#808080', '#FFD700'][idx % 5],
                   opacity: partnersVisible ? 1 : 0,
@@ -633,8 +633,8 @@ export default function Home() {
                   transitionDelay: partnersVisible ? `${idx * 100}ms` : '0ms',
                 }}
               >
-                <img src={partner.image} alt={partner.name} className="w-full h-32 object-contain mb-4" />
-                <h3 className="text-center font-black text-sm">{partner.name}</h3>
+                <img src={partner.image} alt={partner.name} className="w-full h-32 object-contain mb-4 transition-all duration-300 hover:brightness-110" />
+                <h3 className="text-center font-black text-sm transition-all duration-300 hover:text-festival-pink">{partner.name}</h3>
               </div>
             ))}
           </div>
