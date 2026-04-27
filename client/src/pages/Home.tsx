@@ -39,7 +39,7 @@ const SCHEDULE = [
     },
   },
   {
-    time: '17:00 - 18:00',
+    time: '19:00 - 20:00',
     stage: 'PALCO B',
     band: {
       id: 4,
@@ -61,7 +61,7 @@ const SCHEDULE = [
     },
   },
   {
-    time: '19:00 - 20:00',
+    time: '17:00 - 18:00',
     stage: 'PALCO B',
     band: {
       id: 6,
