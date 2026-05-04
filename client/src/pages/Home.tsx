@@ -325,7 +325,7 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       id: 9,
       name: 'LUKARI',
       category: 'Varejo',
-      logo: '/manus-storage/pasted_file_0iVZGa_LOGO-HORIZONTAL_f3b56928.webp',
+      logo: '/manus-storage/lukari_black_bg_13d81f13.png',
     },
     {
       id: 10,
