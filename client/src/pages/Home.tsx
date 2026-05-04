@@ -327,6 +327,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Varejo',
       logo: '/manus-storage/pasted_file_0iVZGa_LOGO-HORIZONTAL_f3b56928.webp',
     },
+    {
+      id: 10,
+      name: 'Campo Palace Hotel',
+      category: 'Hospedagem',
+      logo: '/manus-storage/pasted_file_oQcsn4_image_a69d0279.png',
+    },
   ],
   bronze: [
     {
