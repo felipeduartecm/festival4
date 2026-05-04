@@ -321,6 +321,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Tecnologia',
       logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_tm4N4d_image_c12a4eae.png',
     },
+    {
+      id: 9,
+      name: 'LUKARI',
+      category: 'Varejo',
+      logo: '/manus-storage/pasted_file_0iVZGa_LOGO-HORIZONTAL_f3b56928.webp',
+    },
   ],
   bronze: [
     {
