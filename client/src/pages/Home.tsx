@@ -333,6 +333,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Hospedagem',
       logo: '/manus-storage/pasted_file_oQcsn4_image_a69d0279.png',
     },
+    {
+      id: 11,
+      name: 'TERRA FM',
+      category: 'Mídia',
+      logo: '/manus-storage/pasted_file_pwAj71_image_ca2d9f29.png',
+    },
   ],
   bronze: [
     {
