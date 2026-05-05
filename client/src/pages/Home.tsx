@@ -325,19 +325,19 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       id: 9,
       name: 'LUKARI',
       category: 'Varejo',
-      logo: '/manus-storage/pasted_file_OXuSdB_image_2ca74fe1.png',
+      logo: '/manus-storage/pasted_file_OXuSdB_image_04584a0f.png',
     },
     {
       id: 10,
       name: 'Campo Palace Hotel',
       category: 'Hospedagem',
-      logo: '/manus-storage/pasted_file_oQcsn4_image_a69d0279.png',
+      logo: '/manus-storage/pasted_file_oQcsn4_image_100131d5.png',
     },
     {
       id: 11,
       name: 'TERRA FM',
       category: 'Mídia',
-      logo: '/manus-storage/pasted_file_pwAj71_image_ca2d9f29.png',
+      logo: '/manus-storage/pasted_file_pwAj71_image_920127e3.png',
     },
   ],
   bronze: [
