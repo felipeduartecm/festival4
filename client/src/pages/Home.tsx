@@ -339,6 +339,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Mídia',
       logo: '/manus-storage/pasted_file_pwAj71_image_920127e3.png',
     },
+    {
+      id: 12,
+      name: 'Musical FM',
+      category: 'Mídia',
+      logo: '/manus-storage/pasted_file_ROeQUT_image_c361cd2b.png',
+    },
   ],
   bronze: [
     {
