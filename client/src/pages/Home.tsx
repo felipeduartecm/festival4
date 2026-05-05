@@ -345,6 +345,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Mídia',
       logo: '/manus-storage/pasted_file_ROeQUT_image_c361cd2b.png',
     },
+    {
+      id: 13,
+      name: 'Thel Publicidade',
+      category: 'Publicidade',
+      logo: '/manus-storage/pasted_file_jtByGe_image_2994f808.png',
+    },
   ],
   bronze: [
     {
