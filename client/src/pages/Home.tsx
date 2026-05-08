@@ -383,12 +383,12 @@ export default function Home() {
         minHeight: '100vh',
       }}>
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full">
+        <div className="relative z-10 flex items-center justify-start h-full pl-4 md:pl-12">
           {/* Mascote */}
           <img 
             src="/manus-storage/mascote_transparent_01f2e392.png" 
             alt="Mascote Festival Cristófoli" 
-            className="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-bounce"
+            className="w-48 h-48 md:w-96 md:h-96 object-contain drop-shadow-2xl animate-bounce"
           />
         </div>
 
