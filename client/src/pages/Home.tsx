@@ -384,12 +384,12 @@ export default function Home() {
       }}>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 w-full h-full flex items-center">
-          {/* Mascote - Lado Esquerdo */}
-          <div className="absolute left-4 md:left-12 top-1/2 transform -translate-y-1/2">
+          {/* Mascote - Canto Superior Esquerdo */}
+          <div className="absolute left-4 md:left-8 top-4 md:top-8">
             <img 
               src="/manus-storage/mascote_transparent_01f2e392.png" 
               alt="Mascote Festival Cristófoli" 
-              className="w-48 h-48 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-bounce"
+              className="w-40 h-40 md:w-64 md:h-64 object-contain drop-shadow-2xl animate-bounce"
             />
           </div>
         </div>
