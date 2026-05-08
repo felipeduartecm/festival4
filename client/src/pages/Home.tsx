@@ -374,7 +374,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-full bg-cover bg-center flex items-center justify-center" style={{
+      <section className="relative w-full bg-cover bg-center" style={{
         backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_a1DrGS_image_0c8984ff.png)',
         backgroundSize: 'contain',
         backgroundPosition: 'center',
@@ -383,13 +383,17 @@ export default function Home() {
         minHeight: '100vh',
       }}>
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 flex items-center justify-start h-full pl-4 md:pl-12">
-          {/* Mascote */}
-          <img 
-            src="/manus-storage/mascote_transparent_01f2e392.png" 
-            alt="Mascote Festival Cristófoli" 
-            className="w-48 h-48 md:w-96 md:h-96 object-contain drop-shadow-2xl animate-bounce"
-          />
+        <div className="relative z-10 w-full h-full flex items-center">
+          {/* Mascote - Lado Esquerdo */}
+          <div className="w-1/3 flex justify-center">
+            <img 
+              src="/manus-storage/mascote_transparent_01f2e392.png" 
+              alt="Mascote Festival Cristófoli" 
+              className="w-48 h-48 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-bounce"
+            />
+          </div>
+          {/* Espaço para o resto da imagem */}
+          <div className="w-2/3"></div>
         </div>
 
         {/* Date/Location Card */}
