@@ -383,7 +383,14 @@ export default function Home() {
         minHeight: '100vh',
       }}>
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full">
+          {/* Mascote */}
+          <img 
+            src="/manus-storage/mascote_transparent_01f2e392.png" 
+            alt="Mascote Festival Cristófoli" 
+            className="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-bounce"
+          />
+        </div>
 
         {/* Date/Location Card */}
         <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8 bg-black/80 text-white px-4 md:px-6 py-3 md:py-4 rounded-lg text-sm md:text-base">
