@@ -903,13 +903,13 @@ export default function Home() {
           
           <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-festival-purple">
             <MapView
-              initialCenter={{ lat: -24.0468, lng: -51.2358 }}
-              initialZoom={16}
+              initialCenter={{ lat: -24.0436, lng: -51.2281 }}
+              initialZoom={17}
               onMapReady={(map) => {
                 new (window.google.maps.marker as any).AdvancedMarkerElement({
                   map,
-                  position: { lat: -24.0468, lng: -51.2358 },
-                  title: 'Festival Cristófoli 2026 - Mourão Garden',
+                  position: { lat: -24.0436, lng: -51.2281 },
+                  title: 'Festival Cristófoli 2026 - Mourão Garden (2J3V+62)',
                 });
               }}
               className="h-[500px] md:h-[600px]"
