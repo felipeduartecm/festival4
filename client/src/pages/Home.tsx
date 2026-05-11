@@ -140,7 +140,7 @@ const FAQS = [
   {
     id: 4,
     question: 'Quem tem direito à meia-entrada?',
-    answer: 'No Paraná, a meia-entrada (50% de desconto) é garantida por leis federais e estaduais para: estudantes, idosos (60+), pessoas com deficiência, jovens de baixa renda (15-29 anos), professores da rede pública/privada (Lei 15.876/2008) e profissionais de saúde (Lei 22.235/2024). É obrigatório apresentar documento comprobatório válido na entrada.',
+    answer: 'No Paraná, a meia-entrada (50% de desconto) é garantida por leis federais e estaduais para: estudantes, idosos (60+), pessoas com deficiência, jovens de baixa renda (15-29 anos), professores da rede pública/privada (Lei 15.876/2008) e profissionais de saúde (Lei 22.235/2024). É obrigatório apresentar documento comprobatório válido na entrada. Importante: Os ingressos de pré-venda não se encaixam nas promoções de meia-entrada. A meia-entrada está disponível apenas na venda normal do evento.',
     color: 'bg-festival-pink',
   },
   {
