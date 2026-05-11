@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, MapPin, Calendar, Users } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MapPin, Calendar, Users, Instagram } from 'lucide-react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { MapView } from '@/components/Map';
 
@@ -1030,9 +1030,22 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-700 pt-8 text-center">
-            <p className="text-gray-400 text-sm mb-2">© 2026 Festival Cristófoli. Todos os direitos reservados.</p>
-            <p className="text-gray-500 text-xs">Desenvolvido com ♥ para a comunidade de Campo Mourão</p>
+          <div className="border-t border-gray-700 pt-8">
+            <div className="flex justify-center gap-6 mb-6">
+              <a
+                href="https://www.instagram.com/festivalcristofoli/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-festival-pink transition-colors duration-300"
+                aria-label="Instagram do Festival Cristófoli"
+              >
+                <Instagram size={28} />
+              </a>
+            </div>
+            <div className="text-center">
+              <p className="text-gray-400 text-sm mb-2">© 2026 Festival Cristófoli. Todos os direitos reservados.</p>
+              <p className="text-gray-500 text-xs">Desenvolvido com ♥ para a comunidade de Campo Mourão</p>
+            </div>
           </div>
         </div>
       </footer>
