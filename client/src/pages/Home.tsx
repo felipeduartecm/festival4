@@ -902,17 +902,15 @@ export default function Home() {
           <p className="text-center text-gray-600 mb-12 text-lg">R. Pioneiro Alberto Tanigut, 120 - Jardim Silvana, Campo Mourão - PR</p>
           
           <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-festival-purple">
-            <MapView
-              initialCenter={{ lat: -24.0436, lng: -51.2281 }}
-              initialZoom={17}
-              onMapReady={(map) => {
-                new (window.google.maps.marker as any).AdvancedMarkerElement({
-                  map,
-                  position: { lat: -24.0436, lng: -51.2281 },
-                  title: 'Festival Cristófoli 2026 - Mourão Garden (2J3V+62)',
-                });
-              }}
-              className="h-[500px] md:h-[600px]"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4366.365327867575!2d-52.357397899999995!3d-23.9969796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed0b53aa449941%3A0x9ad483d32ebcf50e!2sMour%C3%A3o%20Garden%20Eventos!5e1!3m2!1spt-BR!2sbr!4v1778521237244!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="500"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full"
             />
           </div>
           
