@@ -413,9 +413,11 @@ export default function Home() {
           <div className="bg-gradient-to-r from-festival-pink to-festival-purple rounded-2xl p-8 shadow-2xl">
             <h3 className="text-3xl md:text-4xl font-black text-white mb-4 text-center">NÃO PERCA ESTE MOMENTO</h3>
             <p className="text-white text-center mb-8 text-lg">Garanta seu ingresso agora e faça parte da história do 14º Festival de Rock</p>
-            <Button className="w-full bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black text-lg py-6">
-              PRÉ-VENDA
-            </Button>
+            <a href="https://beta.meubilhete.com.br/14-festival-cristofoli" target="_blank" rel="noopener noreferrer" className="block">
+              <Button className="w-full bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black text-lg py-6">
+                PRÉ-VENDA
+              </Button>
+            </a>
           </div>
         </div>
       </section>
