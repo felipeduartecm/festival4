@@ -363,7 +363,7 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       id: 14,
       name: 'Ford Barigüi',
       category: 'Automóvel',
-      logo: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663031941384/IjTwizheIajVSayM.png',
+      logo: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663031941384/EmqxEjsJEgnXuWRe.png',
     },
   ],
 };
