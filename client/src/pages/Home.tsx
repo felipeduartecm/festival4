@@ -351,6 +351,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Publicidade',
       logo: '/manus-storage/pasted_file_jtByGe_image_2994f808.png',
     },
+    {
+      id: 15,
+      name: 'ARTT',
+      category: 'Artes',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_TaBM2c_image_915f90a3.png',
+    },
   ],
   bronze: [
     {
