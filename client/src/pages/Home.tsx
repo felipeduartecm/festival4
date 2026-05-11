@@ -377,6 +377,28 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = React.useState<number | null>(null);
+  const [countdown, setCountdown] = React.useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  React.useEffect(() => {
+    const calculateCountdown = () => {
+      const eventDate = new Date('2026-09-19T00:00:00').getTime();
+      const now = new Date().getTime();
+      const difference = eventDate - now;
+
+      if (difference > 0) {
+        setCountdown({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    };
+
+    calculateCountdown();
+    const timer = setInterval(calculateCountdown, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   const { ref: esgRef, isVisible: esgVisible } = useIntersectionObserver();
   const { ref: lineupRef, isVisible: lineupVisible } = useIntersectionObserver();
@@ -386,6 +408,34 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Countdown Banner */}
+      <section className="bg-gradient-to-r from-festival-pink to-festival-purple py-6 px-4 sticky top-0 z-50 shadow-lg">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <p className="text-white text-sm md:text-base font-bold mb-3">⏰ FALTAM APENAS</p>
+            <div className="flex justify-center gap-4 md:gap-8">
+              <div className="bg-white/20 backdrop-blur rounded-lg p-3 md:p-4 min-w-20">
+                <div className="text-2xl md:text-4xl font-black text-festival-yellow">{countdown.days}</div>
+                <div className="text-xs md:text-sm text-white font-bold mt-1">DIAS</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur rounded-lg p-3 md:p-4 min-w-20">
+                <div className="text-2xl md:text-4xl font-black text-festival-yellow">{countdown.hours}</div>
+                <div className="text-xs md:text-sm text-white font-bold mt-1">HORAS</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur rounded-lg p-3 md:p-4 min-w-20">
+                <div className="text-2xl md:text-4xl font-black text-festival-yellow">{countdown.minutes}</div>
+                <div className="text-xs md:text-sm text-white font-bold mt-1">MIN</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur rounded-lg p-3 md:p-4 min-w-20">
+                <div className="text-2xl md:text-4xl font-black text-festival-yellow">{countdown.seconds}</div>
+                <div className="text-xs md:text-sm text-white font-bold mt-1">SEG</div>
+              </div>
+            </div>
+            <p className="text-white text-xs md:text-sm mt-3 font-semibold">Para o Festival Cristófoli 2026 - 19 de Setembro</p>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative w-full bg-cover bg-center" style={{
         backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_a1DrGS_image_0c8984ff.png)',
