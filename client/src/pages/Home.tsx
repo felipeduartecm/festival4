@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, MapPin, Calendar, Users } from 'lucide-react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { MapView } from '@/components/Map';
 
 const SCHEDULE = [
   {
@@ -884,6 +885,53 @@ export default function Home() {
             >
               📥 BAIXAR MEDIA KIT
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Mapa Interativo - Localização */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            LOCALIZAÇÃO
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-festival-pink to-festival-yellow">
+              DO EVENTO
+            </span>
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">Mourão Garden - Campo Mourão, Paraná</p>
+          
+          <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-festival-purple">
+            <MapView
+              initialCenter={{ lat: -24.0475, lng: -51.2275 }}
+              initialZoom={15}
+              onMapReady={(map) => {
+                new (window.google.maps.marker as any).AdvancedMarkerElement({
+                  map,
+                  position: { lat: -24.0475, lng: -51.2275 },
+                  title: 'Festival Cristófoli 2026 - Mourão Garden',
+                });
+              }}
+              className="h-[500px] md:h-[600px]"
+            />
+          </div>
+          
+          <div className="mt-12 grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-festival-pink/10 to-festival-purple/10 rounded-2xl p-6 border-2 border-festival-pink">
+              <div className="text-4xl mb-4">📍</div>
+              <h3 className="text-xl font-black mb-2">ENDEREÇO</h3>
+              <p className="text-gray-700">Mourão Garden<br />Campo Mourão, PR</p>
+            </div>
+            <div className="bg-gradient-to-br from-festival-yellow/10 to-festival-pink/10 rounded-2xl p-6 border-2 border-festival-yellow">
+              <div className="text-4xl mb-4">📅</div>
+              <h3 className="text-xl font-black mb-2">DATA</h3>
+              <p className="text-gray-700">19 de Setembro<br />de 2026</p>
+            </div>
+            <div className="bg-gradient-to-br from-festival-purple/10 to-festival-yellow/10 rounded-2xl p-6 border-2 border-festival-purple">
+              <div className="text-4xl mb-4">🎸</div>
+              <h3 className="text-xl font-black mb-2">HORÁRIO</h3>
+              <p className="text-gray-700">14:00 - 01:00<br />(Próximo dia)</p>
+            </div>
           </div>
         </div>
       </section>
