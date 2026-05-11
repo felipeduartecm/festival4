@@ -358,6 +358,12 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       category: 'Artes',
       logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_TaBM2c_image_915f90a3.png',
     },
+    {
+      id: 16,
+      name: 'DROZ',
+      category: 'Tecnologia',
+      logo: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663031941384/lDZfgpiCRBUHcuwq.png',
+    },
   ],
   bronze: [
     {
