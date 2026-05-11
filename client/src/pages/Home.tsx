@@ -899,16 +899,16 @@ export default function Home() {
               DO EVENTO
             </span>
           </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">Mourão Garden - Campo Mourão, Paraná</p>
+          <p className="text-center text-gray-600 mb-12 text-lg">R. Pioneiro Alberto Tanigut, 120 - Jardim Silvana, Campo Mourão - PR</p>
           
           <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-festival-purple">
             <MapView
-              initialCenter={{ lat: -24.0475, lng: -51.2275 }}
-              initialZoom={15}
+              initialCenter={{ lat: -24.0468, lng: -51.2358 }}
+              initialZoom={16}
               onMapReady={(map) => {
                 new (window.google.maps.marker as any).AdvancedMarkerElement({
                   map,
-                  position: { lat: -24.0475, lng: -51.2275 },
+                  position: { lat: -24.0468, lng: -51.2358 },
                   title: 'Festival Cristófoli 2026 - Mourão Garden',
                 });
               }}
@@ -920,7 +920,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-festival-pink/10 to-festival-purple/10 rounded-2xl p-6 border-2 border-festival-pink">
               <div className="text-4xl mb-4">📍</div>
               <h3 className="text-xl font-black mb-2">ENDEREÇO</h3>
-              <p className="text-gray-700">Mourão Garden<br />Campo Mourão, PR</p>
+              <p className="text-gray-700">R. Pioneiro Alberto Tanigut, 120<br />Jardim Silvana, Campo Mourão - PR<br />CEP: 87309-720</p>
             </div>
             <div className="bg-gradient-to-br from-festival-yellow/10 to-festival-pink/10 rounded-2xl p-6 border-2 border-festival-yellow">
               <div className="text-4xl mb-4">📅</div>
