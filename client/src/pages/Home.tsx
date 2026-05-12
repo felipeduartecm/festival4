@@ -417,19 +417,9 @@ export default function Home() {
       {/* Countdown Banner */}
       <section className="bg-gradient-to-r from-festival-pink to-festival-purple py-6 px-4 sticky top-0 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between gap-4 md:gap-8">
-            {/* Mascote no Banner */}
-            <div className="hidden md:flex flex-shrink-0">
-              <img 
-                src="/manus-storage/mascote_transparent_01f2e392.png" 
-                alt="Mascote Festival Cristófoli" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-lg animate-bounce"
-              />
-            </div>
-            {/* Contador */}
-            <div className="flex-1 text-center">
-              <p className="text-white text-sm md:text-base font-bold mb-3">⏰ FALTAM APENAS</p>
-              <div className="flex justify-center gap-4 md:gap-8">
+          <div className="text-center">
+            <p className="text-white text-sm md:text-base font-bold mb-3">⏰ FALTAM APENAS</p>
+            <div className="flex justify-center gap-4 md:gap-8">
               <div className="bg-white/20 backdrop-blur rounded-lg p-3 md:p-4 min-w-20">
                 <div className="text-2xl md:text-4xl font-black text-festival-yellow">{countdown.days}</div>
                 <div className="text-xs md:text-sm text-white font-bold mt-1">DIAS</div>
@@ -446,9 +436,8 @@ export default function Home() {
                 <div className="text-2xl md:text-4xl font-black text-festival-yellow">{countdown.seconds}</div>
                 <div className="text-xs md:text-sm text-white font-bold mt-1">SEG</div>
               </div>
-              </div>
-              <p className="text-white text-xs md:text-sm mt-3 font-semibold">Para o Festival Cristófoli 2026 - 19 de Setembro</p>
             </div>
+            <p className="text-white text-xs md:text-sm mt-3 font-semibold">Para o Festival Cristófoli 2026 - 19 de Setembro</p>
           </div>
         </div>
       </section>
@@ -464,6 +453,14 @@ export default function Home() {
       }}>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 w-full h-full flex items-center">
+          {/* Mascote - Canto Superior Esquerdo */}
+          <div className="absolute left-4 md:left-8 top-80 md:top-96">
+            <img 
+              src="/manus-storage/mascote_transparent_01f2e392.png" 
+              alt="Mascote Festival Cristófoli" 
+              className="w-48 h-48 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-bounce"
+            />
+          </div>
         </div>
 
         {/* Date/Location Card */}
