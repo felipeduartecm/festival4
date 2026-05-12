@@ -13,7 +13,7 @@ const SCHEDULE = [
       id: 1,
       name: 'Escola de Música Adriano Lima',
       genre: 'Apresentação Musical',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_UFhSkp_image_27bb76af.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_UFhSkp_image_27bb76af.png',
       isHeadliner: false,
     },
   },
@@ -24,7 +24,7 @@ const SCHEDULE = [
       id: 2,
       name: 'Banda Underdogs',
       genre: 'Classic Rock Tribute',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/bandaunderdogs_799681e6.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/bandaunderdogs_799681e6.png',
       isHeadliner: false,
     },
   },
@@ -35,7 +35,7 @@ const SCHEDULE = [
       id: 3,
       name: 'Dirigivel Cósmico',
       genre: 'Tributo Led Zeppelin',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_iyeNNY_image_4b855368.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_iyeNNY_image_4b855368.png',
       isHeadliner: false,
     },
   },
@@ -46,7 +46,7 @@ const SCHEDULE = [
       id: 6,
       name: 'B2S - Back 2 School',
       genre: '00\'s Hits',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_jETCTp_image_d3d8ff27.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_jETCTp_image_d3d8ff27.png',
       isHeadliner: false,
     },
   },
@@ -57,7 +57,7 @@ const SCHEDULE = [
       id: 5,
       name: 'CPM22 Cover Brasil',
       genre: 'Rock Clássico',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_3yYUug_image_114d681e.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_3yYUug_image_114d681e.png',
       isHeadliner: false,
     },
   },
@@ -68,7 +68,7 @@ const SCHEDULE = [
       id: 4,
       name: 'Raimundera Cover Oficial',
       genre: 'Raimundos Cover Oficial',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_oI9m16_image_29c294f3.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_oI9m16_image_29c294f3.png',
       isHeadliner: false,
     },
   },
@@ -79,7 +79,7 @@ const SCHEDULE = [
       id: 7,
       name: 'Backdoors Band',
       genre: 'The Doors Cover Brasil',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_GttyNF_image_a754cfff.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_GttyNF_image_a754cfff.png',
       isHeadliner: false,
     },
   },
@@ -90,7 +90,7 @@ const SCHEDULE = [
       id: 8,
       name: 'System Of A Down',
       genre: 'Cover Oficial Brasil',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_wIWkAI_image_ce35f691.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_wIWkAI_image_ce35f691.png',
       isHeadliner: false,
     },
   },
@@ -101,7 +101,7 @@ const SCHEDULE = [
       id: 9,
       name: 'Candyman Club',
       genre: 'Sucessos dos Anos 80',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EMD929_image_ad8d3cc7.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_EMD929_image_ad8d3cc7.png',
       isHeadliner: true,
     },
   },
@@ -112,7 +112,7 @@ const SCHEDULE = [
       id: 10,
       name: 'Iron Maiden Cover Brasil',
       genre: 'Heavy Metal',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_6mbJZL_image_a1c6e4b6.png',
+      image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_6mbJZL_image_a1c6e4b6.png',
       isHeadliner: true,
     },
   },
@@ -155,67 +155,67 @@ const PARTNERS = [
   {
     id: 1,
     name: 'Agenna Som',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Ms8yur_image_e6a284cc.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_Ms8yur_image_e6a284cc.png',
   },
   {
     id: 2,
     name: 'Garcia Foods',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ZiBEAT_image_5a88ed54.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_ZiBEAT_image_5a88ed54.png',
   },
   {
     id: 3,
     name: 'Mourão Garden',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_FX4gyu_image_49b9c434.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_FX4gyu_image_49b9c434.png',
   },
   {
     id: 4,
     name: 'Cristófoli Biossegurança',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_foV8Rv_image_5d8f50c2.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_foV8Rv_image_5d8f50c2.png',
   },
   {
     id: 5,
     name: 'Biovis',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_c9ycqy_image_2fa8bf7e.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_c9ycqy_image_2fa8bf7e.png',
   },
   {
     id: 6,
     name: 'SESC Mesa Brasil',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Y5M3Mj_image_4bb88910.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_Y5M3Mj_image_4bb88910.png',
   },
   {
     id: 7,
     name: 'PDV365',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ClSgMj_image_664b6fe9.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_ClSgMj_image_664b6fe9.png',
   },
   {
     id: 8,
     name: 'VIEX',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_y5Q1Dw_logotapp_695ea81f.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_y5Q1Dw_logotapp_695ea81f.png',
   },
   {
     id: 9,
     name: 'CINEMAXS',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_KrkKy9_image_b5ceca31.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_KrkKy9_image_b5ceca31.png',
   },
   {
     id: 10,
     name: 'BLZ Soluções WEB',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_2vpST1_image_d2d05f1c.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_2vpST1_image_d2d05f1c.png',
   },
   {
     id: 11,
     name: 'Walter Natálio Fotografia',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Np5xot_walter-assinatura_58829ae2.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_Np5xot_walter-assinatura_58829ae2.webp',
   },
   {
     id: 12,
     name: 'Covers do Brasil',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_BjqJAT_image_b473ff46.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_BjqJAT_image_b473ff46.png',
   },
   {
     id: 13,
     name: 'ARTT',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_TaBM2c_image_915f90a3.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_TaBM2c_image_915f90a3.png',
   },
 ];
 
@@ -224,19 +224,19 @@ const FOOD_TRUCKS = [
     id: 1,
     name: 'KFC',
     description: 'Frango crocante e delicioso',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_pL6OSy_image_72b8f2a3.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_pL6OSy_image_72b8f2a3.webp',
   },
   {
     id: 2,
     name: 'BURGER KING',
     description: 'Hambúrgueres suculentos',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_I3YPIg_image_ac1adfc2.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_I3YPIg_image_ac1adfc2.png',
   },
   {
     id: 3,
     name: 'GELA BOCA',
     description: 'Sorvetes e gelados refrescantes',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_IrJub8_image_41446cbe.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_IrJub8_image_41446cbe.png',
   },
 ];
 
@@ -245,25 +245,25 @@ const BEER_BRANDS = [
     id: 1,
     name: 'Eden Beer',
     description: 'Chopp artesanal premium',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_EBsqWa_image_ff765a06.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_EBsqWa_image_ff765a06.png',
   },
   {
     id: 2,
     name: '4Bodes',
     description: 'Chopp tradicional',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Zo6t46_image_48068bfb.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_Zo6t46_image_48068bfb.png',
   },
   {
     id: 3,
     name: 'TAUA',
     description: 'Chopp regional',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_bFULsl_image_e23424af.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_bFULsl_image_e23424af.png',
   },
   {
     id: 4,
     name: 'Araucária',
     description: 'Cerveja artesanal',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_9MkUvS_image_803174a9.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_9MkUvS_image_803174a9.png',
   },
 ];
 
@@ -280,7 +280,7 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       id: 1,
       name: 'Pro Solus',
       category: 'Tecnologia Agrícola',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_KIjwiD_image_b2ee7c58.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_KIjwiD_image_b2ee7c58.png',
     },
   ],
   gold: [
@@ -288,13 +288,13 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       id: 2,
       name: 'Cristófoli',
       category: 'Biossegurança',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_IEtufi_image_55b9c0cc.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_IEtufi_image_55b9c0cc.png',
     },
     {
       id: 3,
       name: 'Biovis',
       category: 'Higiene e Limpeza',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_MaWerl_image_c6f43804.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_MaWerl_image_c6f43804.png',
     },
   ],
   silver: [
@@ -302,67 +302,67 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       id: 5,
       name: 'PONCE',
       category: 'Tecnologia',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_zgRlrq_image_0a42e2cf.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_zgRlrq_image_0a42e2cf.png',
     },
     {
       id: 6,
       name: 'ATLA',
       category: 'Consultoria',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_eMGfP5_image_63d65955.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_eMGfP5_image_63d65955.png',
     },
     {
       id: 7,
       name: 'CELF',
       category: 'Educação',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_Q1wGnj_image_5d1d350e.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_Q1wGnj_image_5d1d350e.png',
     },
     {
       id: 8,
       name: 'VOLLENZ',
       category: 'Tecnologia',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_tm4N4d_image_c12a4eae.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_tm4N4d_image_c12a4eae.png',
     },
     {
       id: 9,
       name: 'LUKARI',
       category: 'Varejo',
-      logo: '/manus-storage/pasted_file_OXuSdB_image_04584a0f.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_OXuSdB_image_04584a0f.png',
     },
     {
       id: 10,
       name: 'Campo Palace Hotel',
       category: 'Hospedagem',
-      logo: '/manus-storage/pasted_file_oQcsn4_image_100131d5.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_oQcsn4_image_100131d5.png',
     },
     {
       id: 11,
       name: 'TERRA FM',
       category: 'Mídia',
-      logo: '/manus-storage/pasted_file_pwAj71_image_920127e3.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_pwAj71_image_920127e3.png',
     },
     {
       id: 12,
       name: 'Musical FM',
       category: 'Mídia',
-      logo: '/manus-storage/pasted_file_ROeQUT_image_c361cd2b.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_ROeQUT_image_c361cd2b.png',
     },
     {
       id: 13,
       name: 'Thel Publicidade',
       category: 'Publicidade',
-      logo: '/manus-storage/pasted_file_jtByGe_image_2994f808.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_jtByGe_image_2994f808.png',
     },
     {
       id: 15,
       name: 'ARTT',
       category: 'Artes',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_TaBM2c_image_915f90a3.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_TaBM2c_image_915f90a3.png',
     },
     {
       id: 16,
       name: 'DROZ',
       category: 'Tecnologia',
-      logo: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663031941384/lDZfgpiCRBUHcuwq.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/lDZfgpiCRBUHcuwq.png',
     },
   ],
   bronze: [
@@ -370,13 +370,13 @@ const SPONSORS: { diamond: Sponsor[]; gold: Sponsor[]; silver: Sponsor[]; bronze
       id: 4,
       name: 'Zacarias Veículos',
       category: 'Automóvel',
-      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_W9eraY_image_8dbabc1a.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_W9eraY_image_8dbabc1a.png',
     },
     {
       id: 14,
       name: 'Ford Barigüi',
       category: 'Automóvel',
-      logo: 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663031941384/EmqxEjsJEgnXuWRe.png',
+      logo: 'https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/EmqxEjsJEgnXuWRe.png',
     },
   ],
 };
@@ -444,7 +444,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative w-full bg-cover bg-center" style={{
-        backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_a1DrGS_image_0c8984ff.png)',
+        backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_a1DrGS_image_0c8984ff.png)',
         backgroundSize: 'contain',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -456,7 +456,7 @@ export default function Home() {
           {/* Mascote - Canto Superior Esquerdo */}
           <div className="absolute left-4 md:left-8 top-80 md:top-96">
             <img 
-              src="/manus-storage/mascote_transparent_01f2e392.png" 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/mascote_transparent_01f2e392.png" 
               alt="Mascote Festival Cristófoli" 
               className="w-48 h-48 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-bounce"
             />
@@ -609,7 +609,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Left side - Icons and Title */}
               <div className="bg-gradient-to-br from-festival-pink to-festival-purple p-12 flex flex-col items-center justify-center text-white">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_ZXOVrO_no_bg_99b48ca1.png" alt="Projeto Mulher" className="h-48 mb-6 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_ZXOVrO_no_bg_99b48ca1.png" alt="Projeto Mulher" className="h-48 mb-6 object-contain" />
                 <h2 className="text-4xl font-black text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   PROJETO
                 </h2>
@@ -624,8 +624,8 @@ export default function Home() {
                   Parte da doação será destinada para <span className="font-black text-festival-pink">entidades sociais que promovem acolhimento, apoio e oportunidades para mulheres</span>.
                 </p>
                 <div className="flex gap-8 items-center justify-center flex-wrap">
-                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_JK6c1q_image_ab2935e7.png" alt="Lar Dom Bosco" className="h-24 object-contain" />
-                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/pasted_file_LKFisx_image_9cd50758.png" alt="CRAM Campo Mourão" className="h-24 object-contain" />
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_JK6c1q_image_ab2935e7.png" alt="Lar Dom Bosco" className="h-24 object-contain" />
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/pasted_file_LKFisx_image_9cd50758.png" alt="CRAM Campo Mourão" className="h-24 object-contain" />
                 </div>
               </div>
             </div>
@@ -935,7 +935,7 @@ export default function Home() {
             <h3 className="text-2xl font-black text-white mb-4">Interessado em Patrocinar?</h3>
             <p className="text-white mb-6">Baixe nosso Media Kit com todas as informações sobre oportunidades de patrocínio</p>
             <a
-              href="https://d2xsxph8kpxj0f.cloudfront.net/310419663031941384/GgoiTVZT48VD6sZ4ggWoPL/Mediakit2026(v5)_ec46269d.pdf"
+              href="https://d2xsxph8kpxj0f.cloudfront.net/festival-cristofoli-images/Mediakit2026(v5)_ec46269d.pdf"
               download
               className="inline-block bg-festival-yellow hover:bg-festival-yellow/90 text-festival-purple font-black py-3 px-8 rounded-lg transition-all"
             >
